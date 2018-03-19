@@ -1,0 +1,26 @@
+{
+  "name": "kubo",
+  "version": "1.0.0",
+  "description": "Frontend of a community for teachers.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jens9652/KUBO.git"
+  },
+  "author": "Mathias N. Kastrup, Jeppe Mygh, Jens Bram, Max Hansen",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jens9652/KUBO/issues"
+  },
+  "homepage": "https://github.com/jens9652/KUBO#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
