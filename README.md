@@ -23,7 +23,7 @@ grunt
 Build and minify for production.
 ```javascript
 grunt build
+```
 
 ### Project Details
 For project details contact one of the contributors or e-mail [math570k@edu.eal.dk](mailto:math570k@edu.eal.dk).
-```
