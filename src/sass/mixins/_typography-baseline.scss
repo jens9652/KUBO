@@ -1,0 +1,39 @@
+@mixin root {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin scale0 {
+  font-size: 1em;
+  line-height: 1.33333333em;
+  max-width: 560px;
+  margin: auto;
+}
+
+@mixin scale0-header {
+  font-size: 1em;
+  line-height: 1.33333333em;
+  margin-top: 1.33333333em;
+  margin-bottom: 0em;
+}
+
+@mixin scale1 {
+  font-size: 1.61111111em;
+  line-height: 1.65517241em;
+  margin-top: 0.82758621em;
+  margin-bottom: 0em;
+}
+
+@mixin scale2 {
+  font-size: 2.61111111em;
+  line-height: 1.0212766em;
+  margin-top: 0.5106383em;
+  margin-bottom: 0.5106383em;
+}
+
+@mixin scale3 {
+  font-size: 4.22222222em;
+  line-height: 1.26315789em;
+  margin-top: 0.31578947em;
+  margin-bottom: 0.63157894em;
+}

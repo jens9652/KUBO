@@ -1,0 +1,32 @@
+html {
+  @include root;
+}
+
+body {
+  @include scale0;
+  font-family: $baseFont;
+  font-weight: $baseFontWeight;
+}
+
+h1 {
+  @include scale3;
+  font-family: $displayFont;
+  font-weight: $displayFontWeight;
+}
+
+h2 {
+  @include scale2;
+  font-family: $displayFont;
+  font-weight: $displayFontWeight;
+}
+
+h3 {
+  @include scale1;
+  font-family: $displayFont;
+  font-weight: $displayFontWeight;
+}
+
+h4 {
+  @include scale0-header;
+  font-weight: $displayFontWeight;
+}
