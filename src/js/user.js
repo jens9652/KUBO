@@ -1,5 +1,4 @@
 function User() {
-  this.auth = false;
 }
 
 User.prototype.signup = function() {
@@ -37,8 +36,19 @@ User.prototype.signin = function() {
     userData.push(signinForm.elements[i].value);
   }
 
-  if (this.searchUsers(userData[0], userData[1])) {
-    this.auth = true;
+  var user = this.searchUsers(userData[0], userData[1]);
+
+  if (user) {
+    userData = {
+      name: user.name,
+      email: user.email
+    };
+
+    this.name = user.name;
+    this.email = user.email;
+
+    localStorage.setItem('auth', JSON.stringify(userData));
+    location.href = 'dashboard.html';
   } else {
     alert('Could not find user with those credentials!');
   }
@@ -55,5 +65,10 @@ User.prototype.searchUsers = function(email, password){
       }
   }
 }
+
+User.prototype.signout = function() {
+  localStorage.removeItem('auth');
+  window.location = 'index.html';
+};
 
 var user = new User();
