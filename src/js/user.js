@@ -73,7 +73,7 @@ User.prototype.signin = function() {
     }
   }
 
-  var user = this.authenticateUser(userData[0], userData[1]);
+  var user = this.lookupUser(userData[0], userData[1]);
 
   if (user) {
     userData = {
@@ -93,7 +93,7 @@ User.prototype.signin = function() {
   return false;
 }
 
-User.prototype.authenticateUser = function(email, password){
+User.prototype.lookupUser = function(email, password){
   var users = JSON.parse(localStorage.getItem('users'));
 
   for (var i=0; i < users.length; i++) {
@@ -123,6 +123,16 @@ User.prototype.userExists = function(email) {
 User.prototype.signout = function() {
   localStorage.removeItem('auth');
   window.location = 'index.html';
+};
+
+User.prototype.authenticateUser = function() {
+  var user = JSON.parse(localStorage.getItem('auth'));
+  
+  if (!user) {
+    window.location = 'index.html'
+  }
+
+  return user;
 };
 
 var user = new User();
