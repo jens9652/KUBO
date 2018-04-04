@@ -4,9 +4,24 @@ function User() {
 User.prototype.signup = function() {
   var signupForm = document.forms['signup-form'];
 
+  var errors = signupForm.getElementsByClassName('error-message');
+  if (errors) {
+    while (errors[0]) {
+      errors[0].parentNode.removeChild(errors[0]);
+    }
+  }
+
   var userData = []
-  for (var i = 0; i < signupForm.length; i++) {
-    userData.push(signupForm.elements[i].value);
+  for (var i = 0; i < signupForm.length - 1; i++) {
+    if (signupForm.elements[i].value === '') {
+      var errorMessage = document.createElement('div');
+      errorMessage.className = 'error-message';
+      errorMessage.innerHTML = 'ERROR';
+      signupForm.elements[i].parentNode.appendChild(errorMessage);
+      return false;
+    } else {
+      userData.push(signupForm.elements[i].value);
+    }
   }
 
   var newUser = {
@@ -38,9 +53,24 @@ User.prototype.signup = function() {
 User.prototype.signin = function() {
   var signinForm = document.forms['signin-form'];
 
+  var errors = signinForm.getElementsByClassName('error-message');
+  if (errors) {
+    while (errors[0]) {
+      errors[0].parentNode.removeChild(errors[0]);
+    }
+  }
+
   var userData = [];
-  for (var i = 0; i < signinForm.length; i++) {
-    userData.push(signinForm.elements[i].value);
+  for (var i = 0; i < signinForm.length - 1; i++) {
+    if (signinForm.elements[i].value === '') {
+      var errorMessage = document.createElement('div');
+      errorMessage.className = 'error-message';
+      errorMessage.innerHTML = 'ERROR';
+      signinForm.elements[i].parentNode.appendChild(errorMessage);
+      return false;
+    } else {
+      userData.push(signinForm.elements[i].value);
+    }
   }
 
   var user = this.authenticateUser(userData[0], userData[1]);
