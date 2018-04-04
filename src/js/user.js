@@ -15,10 +15,16 @@ User.prototype.signup = function() {
     password: userData[2]
   }
 
+  if (this.userExists(newUser.email)) {
+    alert('A user is already signed up with that email!');
+    return false;
+  }
+
   var users = [];
 
   if (localStorage.getItem('users')) {
-    users.push(JSON.parse(localStorage.getItem('users')));
+    var existingUsers = JSON.parse(localStorage.getItem('users'));
+    users.push(existingUsers[0]);
   }
 
   users.push(newUser);
@@ -26,6 +32,7 @@ User.prototype.signup = function() {
   localStorage.setItem('users', JSON.stringify(users));
 
   return false;
+
 }
 
 User.prototype.signin = function() {
@@ -36,7 +43,7 @@ User.prototype.signin = function() {
     userData.push(signinForm.elements[i].value);
   }
 
-  var user = this.searchUsers(userData[0], userData[1]);
+  var user = this.authenticateUser(userData[0], userData[1]);
 
   if (user) {
     userData = {
@@ -56,7 +63,7 @@ User.prototype.signin = function() {
   return false;
 }
 
-User.prototype.searchUsers = function(email, password){
+User.prototype.authenticateUser = function(email, password){
   var users = JSON.parse(localStorage.getItem('users'));
 
   for (var i=0; i < users.length; i++) {
@@ -65,6 +72,23 @@ User.prototype.searchUsers = function(email, password){
       }
   }
 }
+
+User.prototype.userExists = function(email) {
+  var users = JSON.parse(localStorage.getItem('users'));
+
+  if (users) {
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].email === email) {
+        return true;
+      } else {
+        return false;
+      }
+    }  
+  } else {
+    return false;
+  }
+
+};
 
 User.prototype.signout = function() {
   localStorage.removeItem('auth');
