@@ -8,8 +8,39 @@
 </head>
 <body>
   
-  <h1>Hello <span id="name"></span>! Welcome to KEDO! :-)</h1>
-  <button onclick="user.signout()">Logout</button>
+  <header>
+    <div class="logo">
+      <img src="public/images/kedu-w.svg" alt="KEDU">
+    </div>
+    <div class="user-menu">
+      <span class="user-greet">Hej, <span id="user"></span>!</span>
+      <img src="public/images/avatar.svg" alt="User">
+    </div>
+  </header>
+
+  <div class="container">
+
+    <nav class="sidebar">
+      <div class="nav-top-container">
+        <ul>
+          <li class="active"><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="lessonplans.html">Lesson Plans</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div class="nav-bottom-container">
+        <button class="btn btn-success">Manual & Downloads</button>
+      </div>
+    </nav>
+    
+    <main class="content">
+      <div class="page-header">
+        <h1>Dashboard</h1>
+      </div>
+    </main>
+
+  </div>
 
   <script src="public/js/scripts.min.js"></script>
   <script>

@@ -1,0 +1,19 @@
+header {
+  background: $primaryBlue;
+  color: $white;
+
+  .logo img {
+    height: 2em;
+  }
+
+  .user-menu {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 1.75em;
+      margin-left: 0.5em;
+    }
+  }
+
+}
