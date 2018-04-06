@@ -1,0 +1,33 @@
+.disscussion {
+
+  .post {
+    display: flex;
+    margin-bottom: 1em;
+
+    .meta {
+      width: 25%;
+      text-align: center;
+      border-right: 1px solid $darkGrey;
+      padding: 0 2em;
+
+      .name {
+        color: $primaryBlue;
+        font-weight: bold;
+        display: block;
+      }
+
+      .no-post {
+        @include small;
+        color: $darkGrey;
+        display: block;
+      }
+    }
+
+    .content {
+      width: 75%;
+      padding-left: 2em;
+    }
+
+  }
+
+}

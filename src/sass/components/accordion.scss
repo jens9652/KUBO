@@ -1,0 +1,77 @@
+.accordion {
+
+  .accordion-item {
+    margin-bottom: 1em;
+
+    &.close {
+      position: static;
+      
+      .accordion-item-content {
+        height: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+      }
+
+    }
+
+    &.open {
+      .accordion-item-content {
+        height: auto;
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .accordion-heading {
+        color: $primaryBlue;
+      }
+
+    }
+  }
+
+  .accordion-item-content {
+    overflow: hidden;
+  }
+
+  .accordion-heading {
+    @include scale0-header;
+    font-family: $baseFont;
+    color: $black;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+
+    .tactile {
+      position: absolute;
+      top: -1.35em;
+      left: -4.5em;
+
+      .no {
+        position: absolute;
+        font-size: 1.5em;
+        z-index: 3;
+        width: 2.7em;
+        color: $white;
+        text-align: center;
+        top: 0.9em;
+        font-family: $displayFont;
+      }
+
+      svg {
+        position: absolute;
+        fill: $primaryBlue;
+        width: 4em;
+        height: 4em;
+        z-index: 2
+      }
+
+    }
+  }
+
+  .accordion-item {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+    padding: 1em 2em 1em 2.5em;
+  }
+
+}

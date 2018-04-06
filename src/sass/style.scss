@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'base';
+@import 'styletile';
 
 
 /* ==================================
@@ -16,3 +18,8 @@
 /* ==================================
   COMPONENTS
 ================================== */
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/page-header';
+@import 'components/disscussion';
+@import 'components/accordion';

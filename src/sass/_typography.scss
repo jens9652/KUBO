@@ -8,25 +8,33 @@ body {
   font-weight: $baseFontWeight;
 }
 
+small {
+  @include small;
+}
+
 h1 {
   @include scale3;
   font-family: $displayFont;
   font-weight: $displayFontWeight;
+  color: $secondaryBlue;
 }
 
 h2 {
   @include scale2;
   font-family: $displayFont;
   font-weight: $displayFontWeight;
+  color: $secondaryBlue;
 }
 
 h3 {
   @include scale1;
   font-family: $displayFont;
   font-weight: $displayFontWeight;
+  color: $secondaryBlue;
 }
 
 h4 {
   @include scale0-header;
   font-weight: $displayFontWeight;
+  color: $secondaryBlue;
 }

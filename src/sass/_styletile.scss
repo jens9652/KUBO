@@ -1,0 +1,113 @@
+/* ==================================
+  STYLETILE SPECIFIC STYLES
+================================== */
+
+.styletile-container {
+  max-width: 1210px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.styletile-header {
+  background: $primaryBlue;
+  color: $white;
+  padding: 1em 0;
+
+  h2 {
+    margin: 0;
+  }
+
+  .styletile-container {
+    justify-content: space-between;
+  }
+
+  .styletile-description-container {
+    flex-direction: end;
+    position: relative;
+    margin-top: 0.25em;
+
+    h2 {
+      margin-right: 0.5em;
+      color: $white;
+    }
+
+    .version {
+      position: absolute;
+      font-size: 18px;
+      top: -1em;
+      right: 0;
+      font-family: $baseFont;
+    }
+  }
+}
+
+.styletile-half {
+  min-width: 50%;
+
+  &:first-child {
+    padding-right: 1.5em;
+  }
+
+  &:last-child {
+    padding-left: 1.5em;
+  }
+}
+
+.styletile-full {
+  min-width: 100%;
+}
+
+.styletile-colors {
+  display: flex;
+
+  > div {
+    min-width: 20%;
+    padding: 0.75em;
+    text-align: center;
+    color: $darkGrey;
+  }
+
+  svg {
+    filter: drop-shadow( 0px 0px 2px rgba(0,0,0,0.35) );
+  }
+
+  .white {
+    fill: $white; 
+  }
+  .black {
+    fill: $black;
+  }
+  .lightGrey {
+    fill: $lightGrey;
+  }
+  .primaryBlue {
+    fill: $primaryBlue;
+  }
+  .secondaryBlue {
+    fill: $secondaryBlue;
+  }
+  .green {
+    fill: $green;
+  }
+}
+
+section {
+  margin: 2em 0;
+}
+
+.input-container {
+  display: flex;
+
+  .input-control {
+    &:first-child { padding-right: 0.5em; }
+    &:last-child { padding-left: 0.5em; }
+  }
+
+  > div {
+    min-width: 50%;
+  }
+
+  input {
+    margin-right: 1em;
+  }
+}

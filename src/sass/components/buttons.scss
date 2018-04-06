@@ -1,0 +1,74 @@
+.btn {
+  padding: 0.35em 1.35em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: $lightGrey;
+  letter-spacing: 1px;
+  @include small;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-right: 1em;
+
+  transition: $baseTransition;
+}
+
+.btn-vote {
+  background: transparent;
+  border: 0;
+  outline: none;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  margin-right: 0.5em;
+  padding: 0;
+
+  img {
+    width: 2em;
+    height: 2em;
+  }
+}
+
+.btn-primary {
+  background: $primaryBlue;
+  color: $white;
+  border: 2px solid $primaryBlue;
+
+  &:hover {
+    background: transparent;
+    color: $primaryBlue;
+  }
+}
+
+.btn-secondary {
+  background: $darkGrey;
+  color: $white;
+  border: 2px solid $darkGrey;
+
+  &:hover {
+    background: transparent;
+    color: $darkGrey;
+  }
+}
+
+.btn-success {
+  background: $green;
+  color: $white;
+  border: 2px solid $green;
+
+  &:hover {
+    background: transparent;
+    color: $green;
+  }
+}
+
+.btn-danger {
+  background: $red;
+  color: $white;
+  border: 2px solid $red;
+
+  &:hover {
+    background: transparent;
+    color: $red;
+  }
+}
