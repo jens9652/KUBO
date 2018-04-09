@@ -8,7 +8,64 @@
 </head>
 <body>
   
-  <form id="signin-form" onsubmit="return user.signin()">
+  <div class="login-screen">
+    <div class="container">
+      <div class="application-description">
+        <img src="public/images/new-screen.png" alt="KEDU Online Platform">
+        <h1>KUBO’s online curriculum platform</h1>
+        <p>KUBO Education (or KEDU for short) is KUBO’s online curriculum platform. If you’re a teacher or educator, head on over to find tutorials, exercises, videos, and inspiration. You can also share your own knowledge about KUBO and how to use it with other teachers and educators around the world.</p>
+        <p>The vision behind KEDU is to create a common meeting place for teachers and educators all over the world, who wish to use KUBO and the TagTiles in their teaching to strengthen students’ technological understanding through TagTile play and learning.</p>
+      </div>
+      <div class="login-sidebar">
+        <div class="tabbing">
+          <div class="tabs">
+            <button class="tab" onclick="tab.changeContent('login')">Login</button>
+            <button class="tab" onclick="tab.changeContent('signup')">Signup</button>
+          </div>
+          <div class="tab-contents">
+            <div class="tab-content" id="login">
+              <form id="signin-form" onsubmit="return user.signin()">
+                <h3>Login</h3>
+                <div class="input-control">
+                  <label for="email">Email</label>
+                  <input type="email" name="email">
+                </div class="input-control">
+                <div class="input-control">
+                  <label for="password">Password</label>
+                  <input type="password" name="password">
+                </div>
+                <div class="input-control">
+                  <input class="btn btn-success" type="submit" value="Login">
+                </div>
+              </form>
+            </div>
+            <div class="tab-content" id="signup">
+              <form id="signup-form" onsubmit="return user.signup()">
+                <h3>Signup</h3>
+                <div class="input-control">
+                  <label for="name">Name</label>
+                  <input type="text" name="name">
+                </div>
+                <div class="input-control">
+                  <label for="email">Email</label>
+                  <input type="email" name="email">
+                </div>
+                <div class="input-control">
+                  <label for="password">Password</label>
+                  <input type="password" name="password">
+                </div>
+                <div class="input-control">
+                  <input class="btn btn-success" type="submit" value="Sign Up">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--<form id="signin-form" onsubmit="return user.signin()">
     <h3>Login</h3>
     <div>
       <label for="email">Email</label>
@@ -40,7 +97,7 @@
     <div>
       <input type="submit">
     </div>
-  </form>
+  </form>-->
 
   <script src="public/js/scripts.min.js"></script>
 </body>

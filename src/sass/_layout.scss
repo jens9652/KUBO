@@ -27,3 +27,15 @@ header {
 .sidebar {
   flex: 0 0 20em;
 }
+
+.login-screen {
+
+  .application-description {
+    min-width: 65%;
+  }
+
+  .login-sidebar {
+    min-width: 35%;
+  }
+
+}
