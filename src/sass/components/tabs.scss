@@ -1,0 +1,11 @@
+.tab-content {
+
+	&.active {
+		display: block;
+	}
+
+	&.disabled {
+		display: none;
+	}
+
+}
