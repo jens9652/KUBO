@@ -19,11 +19,11 @@
       <div class="login-sidebar">
         <div class="tabbing">
           <div class="tabs">
-            <button class="tab" onclick="tab.changeContent('login')">Login</button>
-            <button class="tab" onclick="tab.changeContent('signup')">Signup</button>
+            <button class="tab" onclick="tabChangeContent('login-tab')">Login</button>
+            <button class="tab" onclick="tabChangeContent('signup-tab')">Signup</button>
           </div>
-          <div class="tab-contents">
-            <div class="tab-content" id="login">
+          <div class="tab-container">
+            <div class="tab-content" id="login-tab">
               <form id="signin-form" onsubmit="return user.signin()">
                 <h3>Login</h3>
                 <div class="input-control">
@@ -39,7 +39,7 @@
                 </div>
               </form>
             </div>
-            <div class="tab-content" id="signup">
+            <div class="tab-content" id="signup-tab">
               <form id="signup-form" onsubmit="return user.signup()">
                 <h3>Signup</h3>
                 <div class="input-control">
