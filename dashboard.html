@@ -13,8 +13,17 @@
       <img src="public/images/kedu-w.svg" alt="KEDU">
     </div>
     <div class="user-menu">
-      <span class="user-greet">Hej, <span id="user"></span>!</span>
-      <img src="public/images/avatar.svg" alt="User">
+      <ul>
+        <li>
+          <span class="user-greet">Hi, <span id="user"></span>!</span>
+          <img src="public/images/avatar.svg" alt="User">
+          <ul>
+            <li><a href="usersettings.html">Settings</a></li>
+            <li><a href="javascript:void(0);" onclick="user.signout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+      
     </div>
   </header>
 

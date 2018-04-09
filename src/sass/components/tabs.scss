@@ -1,11 +1,35 @@
-.tab-content {
+.tabbing {
 
-	&.active {
-		display: block;
-	}
+  .tabs {
+    text-align: center;
 
-	&.disabled {
-		display: none;
-	}
+    .tab {
+      background: none;
+      border: 0;
+      text-transform: uppercase;
+      cursor: pointer;
+      outline: none;
+      padding: 0.25em 0.5em;
+      color: $darkGrey;
+      letter-spacing: 1px;
+
+      &.active {
+        border-bottom: 2px solid $darkGrey;
+      }
+    }
+  }
+
+  .tab-content {
+  margin-top: 1em;
+
+  &.active {
+    display: block;
+  }
+
+  &.disabled {
+    display: none;
+  }
+
+}
 
 }

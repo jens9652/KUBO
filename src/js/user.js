@@ -25,9 +25,12 @@ User.prototype.signup = function() {
   }
 
   var newUser = {
-    name: userData[0],
-    email: userData[1],
-    password: userData[2]
+    firstname: userData[0],
+    lastname: userData[1],
+    school: userData[2],
+    country: userData[3],
+    email: userData[4],
+    password: userData[5]
   }
 
   if (this.userExists(newUser.email)) {
@@ -77,7 +80,10 @@ User.prototype.signin = function() {
 
   if (user) {
     userData = {
-      name: user.name,
+      firstname: user.firstname,
+      lastname: user.lastname,
+      school: user.school,
+      country: user.country,
       email: user.email
     };
 
@@ -123,6 +129,7 @@ User.prototype.userExists = function(email) {
 User.prototype.signout = function() {
   localStorage.removeItem('auth');
   window.location = 'index.html';
+  return false;
 };
 
 User.prototype.authenticateUser = function() {

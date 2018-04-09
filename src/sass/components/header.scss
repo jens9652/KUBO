@@ -9,10 +9,68 @@ header {
   .user-menu {
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    ul {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul ul {
+      position: absolute;
+      text-align: right;
+      right: 0;
+      bottom: -5.35em;
+      background: $lightGrey;
+      list-style: none;
+      border-radius: 4px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.55);
+
+      li {
+        display: block;
+        width: 100%;
+        border-top: 1px solid #E2E2E2;
+        border-bottom: 1px solid #FCFCFC;
+
+        &:first-child {
+          border-top: 0;
+          padding-top: 0.25em;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+          padding-bottom: 0.25em;
+        }
+      }
+
+      a {
+        color: $darkGrey;
+        display: block;
+        padding: 0.5em 0.5em 0.5em 8em;
+        text-decoration: none;
+      }
+      display: none;
+    }
+
+    ul li:hover {
+
+      > ul {
+        display: block;
+      }
+
+    }
+
+    .user-greet {
+      padding-right: 2em;
+    }
 
     img {
-      height: 1.75em;
-      margin-left: 0.5em;
+      height: 1.5em;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 
