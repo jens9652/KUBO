@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KEDU | Profile</title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
+</head>
+<body id="dashboard">
+  
+  <header>
+    <div class="logo">
+      <img src="public/images/kedu-w.svg" alt="KEDU">
+    </div>
+    <div class="user-menu">
+      <ul>
+        <li>
+          <span class="user-greet">Hi, <span id="user"></span>!</span>
+          <img src="public/images/avatar.svg" alt="User">
+          <ul>
+            <li><a href="usersettings.html">Settings</a></li>
+            <li><a href="javascript:void(0);" onclick="user.signout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </header>
+
+  <div class="container">
+
+    <nav class="sidebar">
+      <div class="nav-top-container">
+        <ul>
+          <li class="active"><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="lessonplans.html">Lesson Plans</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div class="nav-bottom-container">
+        <button class="btn btn-success">Manual & Downloads</button>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>Profile</h1>
+      </div>
+      
+      <div class="container-user">
+        <div class="container">
+          <div class="profile-user">
+            <div class="img-container-user">
+              <img src="public/images/avatar.svg" alt="User">
+            </div>
+            <div class="information-user">
+              <h3 id="profile-username"></h3>
+              <span class="contributions-user">6 posts</span>
+              <span id="school-name" class="contributions-user"></span>
+              <div>
+                <button class="btn btn-success">Edit information</button>
+              </div>
+              <div>
+              <button class="btn btn-primary">Change password</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="divider">
+
+      <div class="lesson-plans">
+        <h3 class="text-center add-space-bt">Latest Lesson Plans</h3>
+        <div class="container">
+          <div class="lesson">
+            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
+              <div class="overlay"></div>
+              <div class="text">
+                <h3>KUBO Coding License</h3>
+                <p>Give your students a introduction to coding with coding with this lesson plan.</p>
+                <a href="#" class="btn btn-primary">View Lesson Plan</a>
+              </div>
+            </div>
+          </div>
+          <div class="lesson">
+            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
+              <div class="overlay"></div>
+              <div class="text">
+                <h3>Advanced Looping</h3>
+                <p>This lesson plans take looping with KUBO to new heights!</p>
+                <a href="#" class="btn btn-primary">View Lesson Plan</a>
+              </div>
+            </div>
+          </div>
+          <div class="lesson">
+            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
+              <div class="overlay"></div>
+              <div class="text">
+                <h3>Basic Usage</h3>
+                <p>For absolute beginners or younger classes.</p>
+                <a href="#" class="btn btn-primary">View Lesson Plan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="trending-community">
+        <h3 class="text-center add-space-bt">Trending Community Posts</h3>
+        <div class="container">
+          <div class="disscussion">
+            <div class="post">
+              <div class="meta">
+                <img src="public/images/avatar.svg" alt="Avatar">
+              </div>
+              <div class="content">
+                <span class="name">Carsten Jørgensen</span>
+                <h3>Nye muligheder med KUBO</h3>
+                <p>Hej Venner!</p>
+                <p>Min nye undervisning med KUBO fungere bare skide godt! Kan varmt anbefale...</p>
+                <a href="#" class="btn btn-primary">View Post</a>
+              </div>
+            </div>
+          </div>
+          <div class="disscussion">
+            <div class="post">
+              <div class="meta">
+                <img src="public/images/avatar.svg" alt="Avatar">
+              </div>
+              <div class="content">
+                <span class="name">Carsten Jørgensen</span>
+                <h3>Nye muligheder med KUBO</h3>
+                <p>Hej Venner!</p>
+                <p>Min nye undervisning med KUBO fungere bare skide godt! Kan varmt anbefale...</p>
+                <a href="#" class="btn btn-primary">View Post</a>
+              </div>
+            </div>
+          </div>
+          <div class="disscussion">
+            <div class="post">
+              <div class="meta">
+                <img src="public/images/avatar.svg" alt="Avatar">
+              </div>
+              <div class="content">
+                <span class="name">Carsten Jørgensen</span>
+                <h3>Nye muligheder med KUBO</h3>
+                <p>Hej Venner!</p>
+                <p>Min nye undervisning med KUBO fungere bare skide godt! Kan varmt anbefale...</p>
+                <a href="#" class="btn btn-primary">View Post</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="public/js/scripts.min.js"></script>
+  <script>
+    var controller = new ProfileController();
+  </script>
+</body>
+</html>
