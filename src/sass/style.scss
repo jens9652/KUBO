@@ -20,6 +20,11 @@
 @import 'layout';
 
 /* ==================================
+  PAGE SPECIFIC
+================================== */
+@import 'dashboard';
+
+/* ==================================
   COMPONENTS
 ================================== */
 @import 'components/buttons';
@@ -31,3 +36,6 @@
 @import 'components/sidebar';
 @import 'components/tabs';
 @import 'components/login-page';
+@import 'components/news';
+@import 'components/top-contributors';
+@import 'components/lesson-plans';
