@@ -1,0 +1,40 @@
+.container-user {
+  margin: 2em 0;
+  padding: 0 2em;
+  
+  .profile-user {
+    flex: 0 0 33%;
+    text-align: center;
+    @include small;
+
+    h3 {
+      margin: 0;
+    }
+
+    .contributions-user {
+      color: $darkGrey;
+      display: block;
+    }
+
+    .img-container-user {
+      text-align: center;
+
+      img {
+        display: block;
+        max-width: 20em;
+        margin: 0 auto;
+        margin-bottom: 1em;
+      }
+    }
+    .information-user {
+      lineheight: 2em;
+
+      .contributions-user {
+        margin-bottom: 1em;
+      }
+      .btn {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}
