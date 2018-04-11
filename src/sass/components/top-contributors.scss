@@ -1,0 +1,30 @@
+.top-contributors {
+  margin: 2em 0;
+  padding: 0 10em;
+  
+  .user {
+    flex: 0 0 33%;
+    text-align: center;
+    @include small;
+
+    h3 {
+      margin: 0;
+    }
+
+    .contributions {
+      color: $darkGrey;
+      display: block;
+    }
+
+    .img-container {
+      text-align: center;
+
+      img {
+        display: block;
+        max-width: 12em;
+        margin: 0 auto;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

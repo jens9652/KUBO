@@ -6,3 +6,19 @@
   max-width: 100%;
   width: 100%;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.add-space-bt {
+  margin-bottom: 1em;
+}
+
+.divider {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 2em 0;
+}
