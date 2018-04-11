@@ -52,3 +52,23 @@
   }
 
 }
+
+.create-lesson-controls {
+
+  .container {
+    
+    > div {
+      flex: 1;
+    }
+
+  }
+
+  .add-more {
+    text-align: center;
+  }
+
+  .publish {
+    text-align: right;
+  }
+
+}

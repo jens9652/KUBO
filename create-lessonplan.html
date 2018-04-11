@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KEDU | Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
+</head>
+<body id="dashboard">
+
+  <header>
+    <div class="logo">
+      <img src="public/images/kedu-w.svg" alt="KEDU">
+    </div>
+    <div class="user-menu">
+      <ul>
+        <li>
+          <span class="user-greet">Hi, <span id="user"></span>!</span>
+          <img src="public/images/avatar.svg" alt="User">
+          <ul>
+            <li><a href="usersettings.html">Settings</a></li>
+            <li><a href="javascript:void(0);" onclick="user.signout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+  <div class="container">
+
+    <nav class="sidebar">
+      <div class="nav-top-container">
+        <ul>
+          <li class="active"><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="lessonplans.html">Lesson Plans</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </div>
+      <div class="nav-bottom-container">
+        <button class="btn btn-success">Manual & Downloads</button>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>Create Lessonplan</h1>
+      </div>
+      
+      <div class="boxed">
+        <form id="meta-data">
+          <div class="input-control">
+            <label for="name">Lesson Plan Title</label>
+            <input name="name" type="text" placeholder="Enter the name of this lesson plan..">
+          </div>
+          <div class="input-control">
+            <label for="textarea">Lesson Plan Description</label>
+            <textarea name="textarea" id="textare" placeholder="Enter a description for this lesson.."></textarea>
+          </div>
+        </form>
+      </div>
+      
+      <form id="lesson-form">
+        <div class="create-lesson" id="create-lesson">
+
+            <div class="section">
+              <div class="input-control">
+                <label for="name">Section Title</label>
+                <input name="name" type="text" placeholder="Enter Section Title..">
+              </div>
+
+              <div class="input-control">
+                <label for="textarea">Section Content</label>
+                <textarea name="textarea" id="textare" placeholder="Enter section content.."></textarea>
+              </div>
+
+              <hr class="divider">
+            </div>
+
+        </div>
+      </form>
+
+      <div class="create-lesson-controls">
+        <div class="container">
+          <div></div>
+          <div class="add-more">
+            <button class="btn btn-primary" onclick="controller.addNewSection()">+</button>
+          </div>
+          <div class="publish">
+            <button class="btn btn-success" onclick="controller.publish()">Publish</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="public/js/scripts.min.js"></script>
+  <script>
+    var controller = new Lessonplan();
+  </script>
+</body>
+</html>
