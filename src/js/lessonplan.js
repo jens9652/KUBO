@@ -72,3 +72,25 @@ Lessonplan.prototype.publish = function() {
 
   localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
 }
+
+Lessonplan.prototype.listLessons = function(element) {
+  lessonPlans = JSON.parse(localStorage.getItem('lessonPlans'));
+
+  for (var i = 0; i < lessonPlans.length; i++) {
+    var div = document.createElement('div');
+    div.className = 'lesson';
+
+    div.innerHTML = 
+      '<div class="inner" style="background-image: url(&quot;public/images/charger-box.jpg&quot;)">\
+        <div class="overlay"></div>\
+        <div class="text">\
+          <h3>' + lessonPlans[i].title + '</h3>\
+          <p>' + lessonPlans[i].description + '</p>\
+          <a href="#" class="btn btn-primary">View Lesson Plan</a>\
+        </div>\
+      </div>'
+
+    element.appendChild(div);
+  }
+
+};

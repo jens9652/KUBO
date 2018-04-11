@@ -51,98 +51,7 @@
 
       <div class="lesson-plans">
         <h3 class="text-center add-space-bt">Page 1</h3>
-        <div class="container">
-
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/Classroom edition 1.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>KUBO Coding License</h3>
-                <p>Give your students a introduction to coding with this lesson plan.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/Body-+-leaning-head.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Advanced Looping</h3>
-                <p>This lesson plans take looping with KUBO to new heights!</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/bag-of-language-tagtiles.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Basic Usage</h3>
-                <p>For absolute beginners or younger classes.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Math Solving</h3>
-                <p>Begin using the KUBO in your math-lessons</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/Coding-box-open-2.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Naturescience and the KUBO</h3>
-                <p>Evovle your students understanding, using the KUBO</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Language</h3>
-                <p>Use the KUBO-robot in your language classes</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/charger-box.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>KUBO scheduling</h3>
-                <p>Give your students a further understanding of coding with this lesson plan.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/KUBO.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>KUBO is a friend</h3>
-                <p>The KUBO can be used to strenghten the ralationships in your class</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/Map-+-Kubo-+-pile-of-tagtiles.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>KUBO Expert License</h3>
-                <p>Master the KUBO-robot, and it's language. For the trained children.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
+        <div class="container" id="list-lessons">
 
         </div>
       </div>
@@ -152,7 +61,8 @@
 
   <script src="public/js/scripts.min.js"></script>
   <script>
-    var controller = new DashboardController();
+    var controller = new Lessonplan();
+    controller.listLessons(document.getElementById('list-lessons'));
   </script>
 </body>
 </html>
