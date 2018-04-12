@@ -1,14 +1,18 @@
 .topic-community {
-    border: none;
     color: white;
-    padding: 45px 20px;
+    border-radius: 4px;
+    padding: 45px 5px;
     text-align: center;
     text-decoration: none;
     display: block;
     font-size: 20px;
-    flex: 0 0 33%;
     img {
       display: block;
       margin: 0.5em auto;
     }
+}
+
+.topic-box {
+  padding: 5px 5px;
+  flex: 0 0 33%;
 }
