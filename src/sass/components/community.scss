@@ -23,8 +23,19 @@
     .container-topics {
         flex: 0 0 68%;
     }
+    .disscussion {
+        @include small;
+
+        h2 {
+            border-bottom: 1px solid $lightGrey;
+            padding-bottom: 0.5em;
+            font-size: 2em;
+        }
+    }
     .disscussion .post {
-        margin-bottom: 4.5em;
+        margin-bottom: 1.5em;
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid $lightGrey;
     }
     .disscussion .post .meta {
         padding: 0 0.5em;
