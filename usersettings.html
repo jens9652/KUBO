@@ -54,10 +54,14 @@
         <div class="container">
           <div class="profile-user">
             <div class="img-container-user">
-              <img src="public/images/avatar.svg" alt="User">
-            </div>
+              <img src="public/images/avatar.svg" alt="User" id="output_image" class="image-user">
+            </div>      
+            <div> 
+             <input type="file" accept="image/*" onchange="preview_image(event)">
+             <img id="output_image" class="image-user"/>
+           </div>
             <div class="information-user">
-              <h3 id="profile-username"></h3>
+              <h3 id="user-name"></h3>
               <span class="contributions-user">6 posts</span>
               <span id="school-name" class="contributions-user"></span>
               <div>
@@ -68,13 +72,27 @@
               </div>
             </div>
           </div>
+          <div class="divider-user"></div>
+          <div class="badge-wrapper">
+            <div>
+              <h3>Badges</h3>
+            </div>
+            <div>
+              <img src="public/images/badge-01.png" alt="Approved by KUBO -Badge" class="badge"></img>
+              <img src="public/images/badge-01.png" alt="Approved by KUBO -Badge" class="badge"></img>
+            </div>
+            <div>
+              <img src="public/images/badge-01.png" alt="Approved by KUBO -Badge" class="badge"></img>
+              <img src="public/images/badge-01.png" alt="Approved by KUBO -Badge" class="badge"></img>
+            </div>
+          </div>
         </div>
       </div>
-      
+
       <hr class="divider">
 
       <div class="lesson-plans">
-        <h3 class="text-center add-space-bt">Latest Lesson Plans</h3>
+        <h3 class="text-center add-space-bt "><span id="users-latest-lessons"></span></h3>
         <div class="container">
           <div class="lesson">
             <div class="inner" style="background-image: url('public/images/news-large.jpg')">
@@ -112,7 +130,7 @@
       <hr class="divider">
 
       <div class="trending-community">
-        <h3 class="text-center add-space-bt">Trending Community Posts</h3>
+        <h3 class="text-center add-space-bt"><span id="user-posts"></span></h3>
         <div class="container">
           <div class="disscussion">
             <div class="post">
