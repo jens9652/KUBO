@@ -42,7 +42,10 @@ User.prototype.signup = function() {
 
   if (localStorage.getItem('users')) {
     var existingUsers = JSON.parse(localStorage.getItem('users'));
-    users.push(existingUsers[0]);
+
+    for (var i = 0; i < existingUsers.length; i++) {
+      users.push(existingUsers[i]);
+    }
   }
 
   users.push(newUser);

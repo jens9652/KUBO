@@ -12,9 +12,10 @@
       padding: 0.25em 0.5em;
       color: $darkGrey;
       letter-spacing: 1px;
+      margin: 0 0.75em;
 
       &.active {
-        border-bottom: 2px solid $darkGrey;
+        border-bottom: 1px solid $green;
       }
     }
   }

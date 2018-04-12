@@ -46,27 +46,22 @@
 
     <main class="content">
       <div class="page-header">
-        <h1>Lesson Plans</h1>
+        <h1>Sådan kommer du igang!</h1>
       </div>
 
-      <div class="lesson-plans">
-        <div class="toolbar">
-          <div class="tabbing">
-            <div class="tabs">
-              <button class="tab active" onclick="tabChangeContent(event)">Most Recent</button>
-              <button class="tab" onclick="tabChangeContent(event)">Popular</button>
-              <button class="tab" onclick="tabChangeContent(event)">By Subject</button>
-              <button class="tab" onclick="tabChangeContent(event)">Favorites</button>
-            </div>
-          </div>
-          <div class="add-new">
-            <a href="create-lessonplan.html" class="btn btn-success">Create a Lessonplan</a>
-          </div>
+      <div class="view-lesson-plan">
+        <div class="meta" id="meta">
+          
         </div>
+        
         <hr class="divider">
-        <div class="container" id="list-lessons">
 
-        </div>
+        <section id="accordions">
+          <div id="accordion" class="accordion">
+            
+          </div>
+
+        </section>
       </div>
     </main>
   </div>
@@ -75,7 +70,7 @@
   <script src="public/js/scripts.min.js"></script>
   <script>
     var controller = new Lessonplan();
-    controller.listLessons(document.getElementById('list-lessons'));
+    controller.openLesson(document.getElementById('meta'), document.getElementById('accordion'));
   </script>
 </body>
 </html>

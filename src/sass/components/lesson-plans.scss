@@ -51,6 +51,45 @@
     }
   }
 
+  .toolbar {
+    @include small;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+
+  .divider {
+    margin: 1em 0;
+  }
+
+}
+
+.view-lesson-plan {
+
+  .description {
+    @include small;
+    flex: 0 0 32%;
+  }
+
+  .materials {
+    @include small;
+    padding-left: 2em;
+    flex: 0 0 68%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .material {
+      flex: 0 0 33%;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 4em;
+        margin-right: 1em;
+      }
+    }
+  }
+
 }
 
 .create-lesson-controls {
