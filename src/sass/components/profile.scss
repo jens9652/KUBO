@@ -1,6 +1,10 @@
 .container-user {
   margin: 2em 0;
   padding: 0 2em;
+
+  .divider-user {
+    margin-left: 10em;
+  }
   
   .profile-user {
     flex: 0 0 33%;
@@ -25,6 +29,9 @@
         margin: 0 auto;
         margin-bottom: 1em;
       }
+      .image-user {
+        border-radius: 50%;
+      }
     }
     .information-user {
       lineheight: 2em;
@@ -34,6 +41,7 @@
       }
       .btn {
         margin-bottom: 2em;
+        font-size: 1em;
       }
     }
   }
