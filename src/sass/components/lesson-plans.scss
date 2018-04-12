@@ -51,6 +51,17 @@
     }
   }
 
+  .toolbar {
+    @include small;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+
+  .divider {
+    margin: 1em 0;
+  }
+
 }
 
 .view-lesson-plan {

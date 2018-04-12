@@ -50,7 +50,20 @@
       </div>
 
       <div class="lesson-plans">
-        <h3 class="text-center add-space-bt">Page 1</h3>
+        <div class="toolbar">
+          <div class="tabbing">
+            <div class="tabs">
+              <button class="tab active" onclick="tabChangeContent(event)">Most Recent</button>
+              <button class="tab" onclick="tabChangeContent(event)">Popular</button>
+              <button class="tab" onclick="tabChangeContent(event)">By Subject</button>
+              <button class="tab" onclick="tabChangeContent(event)">Favorites</button>
+            </div>
+          </div>
+          <div class="add-new">
+            <a href="create-lessonplan.html" class="btn btn-success">Create a Lessonplan</a>
+          </div>
+        </div>
+        <hr class="divider">
         <div class="container" id="list-lessons">
 
         </div>
