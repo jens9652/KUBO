@@ -1,80 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KEDU | Dashboard</title>
-  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:300,400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" href="public/css/style.css">
-  <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KEDU | Community</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:300,400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
 </head>
-<body id="dashboard">
+<body id="community">
 
-  <header>
-    <div class="logo">
-      <img src="public/images/kedu-w.svg" alt="KEDU">
-    </div>
-    <div class="user-menu">
-      <ul>
-        <li>
-          <span class="user-greet">Hi, <span id="user"></span>!</span>
-          <img src="public/images/avatar.svg" alt="User">
-          <ul>
-            <li><a href="usersettings.html">Settings</a></li>
-            <li><a href="javascript:void(0);" onclick="user.signout()">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
+	<header>
+		<div class="logo">
+			<img src="public/images/kedu-w.svg" alt="KEDU">
+		</div>
+		<div class="user-menu">
+			<ul>
+				<li>
+					<span class="user-greet">Hi, <span id="user"></span>!</span>
+					<img src="public/images/avatar.svg" alt="User">
+					<ul>
+						<li><a href="usersettings.html">Settings</a></li>
+						<li><a href="javascript:void(0);" onclick="user.signout()">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
 
-    </div>
-  </header>
+		</div>
+	</header>
 
-  <div class="container">
+	<div class="container">
 
-    <nav class="sidebar">
-      <div class="nav-top-container">
-        <ul>
-          <li class="active"><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="lessonplans.html">Lesson Plans</a></li>
-          <li><a href="training.html">Training</a></li>
-          <li><a href="community.html">Community</a></li>
-        </ul>
-      </div>
-      <div class="nav-bottom-container">
-        <button class="btn btn-success">Manual & Downloads</button>
-      </div>
-    </nav>
+		<nav class="sidebar">
+			<div class="nav-top-container">
+				<ul>
+					<li class="active"><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="lessonplans.html">Lesson Plans</a></li>
+					<li><a href="training.html">Training</a></li>
+					<li><a href="community.html">Community</a></li>
+				</ul>
+			</div>
+			<div class="nav-bottom-container">
+				<button class="btn btn-success">Manual & Downloads</button>
+			</div>
+		</nav>
 
-    <main class="content">
-      <div class="page-header">
-        <h1>Community</h1>
-      </div>
+		<main class="content">
+			<div class="page-header">
+				<h1>Community</h1>
+			</div>
+
+			<div class="container">
+				<div class="container-news">
+					<div class="disscussion">
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">Carsten Jørgensen</span>
+								<h3>Nye muligheder med KUBO</h3>
+								<a href="#" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">Carsten Jørgensen</span>
+								<h3>Nye muligheder med KUBO</h3>
+								<a href="#" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">Carsten Jørgensen</span>
+								<h3>Nye muligheder med KUBO</h3>
+								<a href="#" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-topics">
+					<div class="container"> 
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #9A0018;"><img src="public/images/start-and-finish.svg" alt="Getting-started">Getting Started</a></div>
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #009A97;"><img src="public/images/technics.svg" alt="Technical-help">Technical Help</a></div>
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #1E2328;"><img src="public/images/light-bulb.svg" alt="Ideas">Ideas</a></div>
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #913684;"><img src="public/images/update-arrows.svg" alt="updates and suggestions">Updates and Suggestions</a></div>
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #DDCF30;"><img src="public/images/mathematics.svg" alt="Subjects">Subjects</a></div>
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #573706;"><img src="public/images/speech-bubble-with-text-lines.svg" alt="General">General Discussion</a></div>
+					</div>
+
+					<h3 class="text-center add-space-bt">Topics</h3>
+
+					<div class="container">
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #9A0018;"><img src="public/images/start-and-finish.svg" alt="Getting-started">Getting Started</a></div>
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #009A97;"><img src="public/images/technics.svg" alt="Technical-help">Technical Help</a></div>
+						<div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #1E2328;"><img src="public/images/light-bulb.svg" alt="Ideas">Ideas</a></div>
+					</div>
+				</div>
+			</div>
+
+		</main>
 
 
-      <h3 class="text-center add-space-bt">Topics</h3>
-      <div class="container">
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #9A0018;"><img src="public/images/start-and-finish.svg" style="width:100px;" alt="Getting-started">Getting Started</a></div>
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #009A97;"><img src="public/images/technics.svg" style="width:100px;" alt="Technical-help">Technical Help</a></div>
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #1E2328;"><img src="public/images/light-bulb.svg" style="width:100px;" alt="Ideas">Ideas</a></div>
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #913684;"><img src="public/images/update-arrows.svg" style="width:100px;" alt="updates and suggestions">Updates and Suggestions</a></div>
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #DDCF30;"><img src="public/images/mathematics.svg" style="width:100px;" alt="Subjects">Subjects</a></div>
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #573706;"><img src="public/images/speech-bubble-with-text-lines.svg" style="width:100px;" alt="General">General Discussion</a></div>
-      </div>
-
-      <hr class="divider">
-
-      <h3 class="text-center add-space-bt">Topics</h3>
-      <div class="container">
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #9A0018;"><img src="public/images/start-and-finish.svg" style="width:75px;" alt="Getting-started">Getting Started</a></div>
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #009A97;"><img src="public/images/technics.svg" style="width:75px;" alt="Technical-help">Technical Help</a></div>
-      <div class="topic-box">  <a class="topic-community" href="lessonplans.html"  style="background-color: #1E2328;"><img src="public/images/light-bulb.svg" style="width:75px;" alt="Ideas">Ideas</a></div>
-      </div>
-
-
-
-  <script src="public/js/scripts.min.js"></script>
-  <script>
-    var controller = new DashboardController();
-  </script>
-</body>
-</html>
+		<script src="public/js/scripts.min.js"></script>
+		<script>
+			var controller = new DashboardController();
+		</script>
+	</body>
+	</html>

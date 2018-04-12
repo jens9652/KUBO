@@ -1,18 +1,40 @@
-.topic-community {
-    color: white;
-    border-radius: 4px;
-    padding: 45px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 20px;
-    img {
-      display: block;
-      margin: 0.5em auto;
+#community {
+    .topic-community {
+        color: white;
+        border-radius: 4px;
+        padding: 25px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        img {
+          display: block;
+          margin: 0.5em auto;
+          width: 50px;
+        }
     }
-}
+    .topic-box {
+        padding: 5px 5px;
+        flex: 0 0 33%;
+    }
+    .container-news {
+        flex: 0 0 32%;
+        padding-right: 3.5em;
+    }
+    .container-topics {
+        flex: 0 0 68%;
+    }
+    .disscussion .post {
+        margin-bottom: 4.5em;
+    }
+    .disscussion .post .meta {
+        padding: 0 0.5em;
+        border-right: none;
+    }
+    .meta {
+      width: 30%;
+      text-align: center;
+      border-right: 1px solid $darkGrey;
+      padding: 0 2em;
+    }
 
-.topic-box {
-  padding: 5px 5px;
-  flex: 0 0 33%;
 }
