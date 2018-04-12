@@ -63,12 +63,13 @@ Lessonplan.prototype.publish = function() {
 
   if (localStorage.getItem('lessonPlans')) {
     var existingLessonPlans = JSON.parse(localStorage.getItem('lessonPlans'));
-    lessonPlans.push(existingLessonPlans[0]);
+    
+    for (var i = 0; i < existingLessonPlans.length; i++) {
+      lessonPlans.push(existingLessonPlans[i]);
+    }
   }
 
-  finalObject.id = lessonPlans.length + 1;
-
-  lessonPlans.push(finalObject);
+  lessonPlans.unshift(finalObject);
 
   localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
 }
