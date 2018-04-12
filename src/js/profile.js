@@ -16,6 +16,15 @@ function ProfileController() {
 
 	var userPosts = fullname + "'s latest community posts";
 	document.getElementById('user-posts').innerHTML = userPosts;
+
+	var usernamepost1 = fullname
+	document.getElementById('username-post1').innerHTML = usernamepost1
+
+	var usernamepost2 = fullname
+	document.getElementById('username-post2').innerHTML = usernamepost2
+
+	var usernamepost3 = fullname
+	document.getElementById('username-post3').innerHTML = usernamepost3
 }
 
 function preview_image(event) {
