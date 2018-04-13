@@ -57,7 +57,7 @@
               <img src="public/images/avatar.svg" alt="User" id="output_image" class="image-user">
             </div>      
             <div> 
-             <input type="file" accept="image/*" onchange="preview_image(event)">
+             <input type="file" accept="image/*" onchange="controller.previewProfileImage(event)">
              <img id="output_image" class="image-user"/>
            </div>
             <div class="information-user">
@@ -93,37 +93,8 @@
 
       <div class="lesson-plans">
         <h3 class="text-center add-space-bt "><span id="users-latest-lessons"></span></h3>
-        <div class="container">
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>KUBO Coding License</h3>
-                <p>Give your students a introduction to coding with coding with this lesson plan.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Advanced Looping</h3>
-                <p>This lesson plans take looping with KUBO to new heights!</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/news-large.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Basic Usage</h3>
-                <p>For absolute beginners or younger classes.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
+        <div id="user-lessons">
+          
         </div>
       </div>
 

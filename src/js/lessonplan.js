@@ -82,7 +82,7 @@ Lessonplan.prototype.publish = function() {
 }
 
 Lessonplan.prototype.listLessons = function(element) {
-  lessonPlans = JSON.parse(localStorage.getItem('lessonPlans'));
+  var lessonPlans = JSON.parse(localStorage.getItem('lessonPlans'));
 
   for (var i = 0; i < lessonPlans.length; i++) {
     var div = document.createElement('div');
