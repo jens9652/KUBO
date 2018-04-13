@@ -105,7 +105,7 @@ Lessonplan.prototype.setLessonplan = function(id) {
   localStorage.setItem('openedLessonplan', JSON.stringify(id));
 }
 
-Lessonplan.prototype.openLesson = function(meta, accordion, header) {
+Lessonplan.prototype.openLesson = function(meta, accordion, header, toolbar) {
   var openedLessonplan = JSON.parse(localStorage.getItem('openedLessonplan'));
 
   if (!openedLessonplan) {
@@ -116,12 +116,12 @@ Lessonplan.prototype.openLesson = function(meta, accordion, header) {
 
   for (var i = 0; i < lessons.length; i++) {
     if(lessons[i].id == openedLessonplan) { 
-      this.showLesson(lessons[i], meta, accordion, header)
+      this.showLesson(lessons[i], meta, accordion, header, toolbar)
     }
   }
 }
 
-Lessonplan.prototype.showLesson = function(lesson, meta, accordion, header) {
+Lessonplan.prototype.showLesson = function(lesson, meta, accordion, header, toolbar) {
   header.innerHTML = lesson.title;
 
   var metaContent = document.createElement('div');
@@ -183,4 +183,132 @@ Lessonplan.prototype.showLesson = function(lesson, meta, accordion, header) {
     accordion.appendChild(accordionItem);
   }
 
+  if (this.user.id == lesson.author.id) {
+    toolbar.innerHTML = 
+      '<button class="btn btn-success" onclick="controller.editLesson(' + lesson.id + ')">Edit Lesson</button>\
+      <hr class="divider">'
+  }
+
 }
+
+Lessonplan.prototype.editLesson = function(id) {
+  localStorage.setItem('editingLesson', JSON.stringify(id));
+  window.location = 'edit-lessonplan.html';
+}
+
+Lessonplan.prototype.editLessonplanPage = function() {
+  var id = JSON.parse(localStorage.getItem('editingLesson'));
+  var lessonPlans = JSON.parse(localStorage.getItem('lessonPlans'));
+
+  for (var i = 0; i < lessonPlans.length; i++) {
+    if (lessonPlans[i].id == id) {
+      document.getElementById('lessonTitle').value = lessonPlans[i].title;
+      document.getElementById('lessonDescription').value = lessonPlans[i].description;
+      
+      var div = document.createElement('div');
+      div.id = 'create-lesson';
+      div.class = 'create-lesson';
+
+      for (var i = 0; i < lessonPlans[i].sections.length; i++) {
+        var section =lessonPlans[i].sections[i];
+
+        var container = document.createElement('div');
+        container.className = 'section';
+
+        container.innerHTML = 
+          '<div class="input-control">\
+              <label for="name">Section Title</label>\
+              <input name="name" type="text" value="' + section.title + '" placeholder="Enter Section Title..">\
+            </div>\
+            <div class="input-control">\
+              <label for="textarea">Section Content</label>\
+              <textarea name="textarea" id="textare" placeholder="Enter section content..">' + section.content + '</textarea>\
+            </div>\
+            <hr class="divider">'
+
+        div.appendChild(container);
+      }
+
+      document.getElementById('lesson-form').appendChild(div);
+      break;
+    }
+  }
+}
+
+Lessonplan.prototype.update = function(id) {
+  var lessonForm = document.forms['lesson-form'];
+  var lessonMeta = document.forms['meta-data'];
+
+  var lessonData = [];
+
+  for (var i = 0; i < lessonForm.length; i++) {
+    lessonData.push(lessonForm.elements[i].value);
+  }
+
+  lessonDataGrouped = [];
+
+  for (var i = 0; i < lessonData.length; i++) {
+    if ((i + 1) % 2 === 0) {
+      var lesson = {
+        title: lessonData[i - 1],
+        content: lessonData[i]
+      }
+
+      lessonDataGrouped.push(lesson);
+    }
+  }
+
+  var lessonMetaData = [];
+
+  for (var i = 0; i < lessonMeta.length; i++) {
+    lessonMetaData.push(lessonMeta.elements[i].value);
+  }
+
+  var finalObject = {
+    title: lessonMetaData[0],
+    description: lessonMetaData[1],
+    sections: lessonDataGrouped
+  }
+
+  var lessonPlans = [];
+
+  if (localStorage.getItem('lessonPlans')) {
+    var existingLessonPlans = JSON.parse(localStorage.getItem('lessonPlans'));
+    
+    for (var i = 0; i < existingLessonPlans.length; i++) {
+      lessonPlans.push(existingLessonPlans[i]);
+    }
+  }
+
+  finalObject.id = id;
+  finalObject.author = this.user;
+
+  for (var i = 0; i < lessonPlans.length; i++) {
+    if (lessonPlans[i].id == id) {
+      lessonPlans.splice(i, 1);
+    }
+  }
+
+  lessonPlans.unshift(finalObject);
+
+  localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
+}
+
+Lessonplan.prototype.delete = function(id) {
+  var lessonPlans = [];
+
+  if (localStorage.getItem('lessonPlans')) {
+    var existingLessonPlans = JSON.parse(localStorage.getItem('lessonPlans'));
+    
+    for (var i = 0; i < existingLessonPlans.length; i++) {
+      if (existingLessonPlans[i].id == id) {
+        console.log(id + ' slettet');
+      } else {
+        console.log(id + ' ikke slettet');
+        lessonPlans.push(existingLessonPlans[i]);
+      }
+    }
+  }
+
+  localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
+};

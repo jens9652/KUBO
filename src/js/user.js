@@ -48,6 +48,8 @@ User.prototype.signup = function() {
     }
   }
 
+  newUser.id = (users.length + 1)
+
   users.push(newUser);
 
   localStorage.setItem('users', JSON.stringify(users));
@@ -83,6 +85,7 @@ User.prototype.signin = function() {
 
   if (user) {
     userData = {
+      id: user.id,
       firstname: user.firstname,
       lastname: user.lastname,
       school: user.school,

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KEDU | Dashboard</title>
   <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="public/css/style.css">
@@ -46,33 +47,48 @@
 
     <main class="content">
       <div class="page-header">
-        <h1 id="page-header-text"></h1>
+        <h1>Edit Lessonplan</h1>
       </div>
-
-      <div class="toolbar" id="toolbar"></div>
-
-      <div class="view-lesson-plan">
-        <div class="meta" id="meta">
-          
-        </div>
-        
-        <hr class="divider">
-
-        <section id="accordions">
-          <div id="accordion" class="accordion">
-            
+      
+      <div class="boxed">
+        <form id="meta-data">
+          <div class="input-control">
+            <label for="title">Lesson Plan Title</label>
+            <input name="title" id="lessonTitle" type="text" placeholder="Enter the name of this lesson plan..">
           </div>
-
-        </section>
+          <div class="input-control">
+            <label for="lessonDescription">Lesson Plan Description</label>
+            <textarea name="lessonDescription" id="lessonDescription" placeholder="Enter a description for this lesson.."></textarea>
+          </div>
+        </form>
       </div>
-    </main>
-  </div>
+      
+      <form id="lesson-form">
+        
+      </form>
 
+      <div class="create-lesson-controls">
+        <div class="container">
+          <div class="delete">
+            <button class="btn btn-danger" onclick="controller.delete(JSON.parse(localStorage.editingLesson))">Delete Lessonplan</button>
+          </div>
+          <div class="add-more">
+            <button class="btn btn-primary" onclick="controller.addNewSection()">+</button>
+          </div>
+          <div class="publish">
+            <button class="btn btn-success" onclick="controller.update(JSON.parse(localStorage.editingLesson))">Update Lessonplan</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
 
   <script src="public/js/scripts.min.js"></script>
   <script>
     var controller = new Lessonplan();
-    controller.openLesson(document.getElementById('meta'), document.getElementById('accordion'), document.getElementById('page-header-text'), document.getElementById('toolbar'));
+    controller.editLessonplanPage()
   </script>
 </body>
 </html>
