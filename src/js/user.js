@@ -27,6 +27,7 @@ User.prototype.signup = function() {
   var newUser = {
     firstname: userData[0],
     lastname: userData[1],
+    image: 'public/images/avatar.svg',
     school: userData[2],
     country: userData[3],
     email: userData[4],
@@ -88,6 +89,7 @@ User.prototype.signin = function() {
       id: user.id,
       firstname: user.firstname,
       lastname: user.lastname,
+      image: user.image,
       school: user.school,
       country: user.country,
       email: user.email
@@ -111,6 +113,7 @@ User.prototype.lookupUser = function(email, password){
   for (var i=0; i < users.length; i++) {
       if (users[i].email === email && users[i].password === password) {
           return users[i];
+          break; // Avoid infinite loop
       }
   }
 }
@@ -130,7 +133,7 @@ User.prototype.userExists = function(email) {
     return false;
   }
 
-};
+}
 
 User.prototype.signout = function() {
   localStorage.removeItem('auth');
@@ -146,6 +149,73 @@ User.prototype.authenticateUser = function() {
   }
 
   return user;
-};
+}
+
+User.prototype.update = function(id, formElements) {
+  var userData = [];
+  var errors = 0;
+
+  // Loop the formelements values and put them into userdata array 
+  //throw an error if an field is empty except for image
+  for (var i = 0; i < formElements.length - 1; i++) {
+    if (formElements[i].value == '' && formElements[i].id != 'image') {
+      errors++;
+    } else {
+      userData.push(formElements[i].value);
+    }
+  }
+
+  // Check if there is any errors, if not - update the right localStorage user
+  if (errors) {
+    alert('All fields should have an value except Profile Image!')
+  } else {
+    // Get all users from localStorage and loop over them to find the right one and delete it.
+    var users = JSON.parse(localStorage.getItem('users'));
+
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].id == id) {
+        users.splice(i, 1);
+
+        break; // Break to avoid infinite loop
+      }
+    }
+
+    // Check if image is empty - set dummy image if it is.
+    if (userData[2] == '') {
+      userData[2] = 'public/images/avatar.svg';
+    }
+
+    // Object that represents the updated user.
+    var updatedUser = {
+      id: id,
+      firstname: userData[0],
+      lastname: userData[1],
+      image: userData[2],
+      school: userData[3],
+      country: userData[4],
+      email: userData[5],
+      password: userData[6]
+    }
+
+    // Push updated user to the user array.
+    users.push(updatedUser);
+
+    // Set the localStorage with the new user array.
+    localStorage.setItem('users', JSON.stringify(users));
+
+    // Finally update the auth object and send the user to their profile.
+    localStorage.setItem('auth', JSON.stringify({
+      id: id,
+      firstname: userData[0],
+      lastname: userData[1],
+      image: userData[2],
+      school: userData[3],
+      country: userData[4],
+      email: userData[5],
+    }));
+    window.location = 'profile.html';
+  }
+
+}
 
 var user = new User();
