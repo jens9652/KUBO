@@ -191,6 +191,8 @@ Lessonplan.prototype.showLesson = function(lesson, meta, accordion, header, tool
       <hr class="divider">'
   }
 
+  document.title = 'KEDU | ' + lesson.title;
+
 }
 
 Lessonplan.prototype.editLesson = function(id) {
