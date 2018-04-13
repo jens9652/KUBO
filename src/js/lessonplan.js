@@ -55,7 +55,8 @@ Lessonplan.prototype.publish = function() {
 
   var finalObject = {
     title: lessonMetaData[0],
-    description: lessonMetaData[1],
+    image: lessonMetaData[1],
+    description: lessonMetaData[2],
     sections: lessonDataGrouped
   }
 
@@ -88,8 +89,14 @@ Lessonplan.prototype.listLessons = function(element) {
     var div = document.createElement('div');
     div.className = 'lesson';
 
+    var image = lessonPlans[i].image;
+
+    if (!image) {
+      image = 'public/images/Coding-box-open-2.jpg';
+    }
+
     div.innerHTML = 
-      '<div class="inner" style="background-image: url(&quot;public/images/charger-box.jpg&quot;)">\
+      '<div class="inner" style="background-image: url(&quot;' + image + '&quot;)">\
         <div class="overlay"></div>\
         <div class="text">\
           <h3>' + lessonPlans[i].title + '</h3>\
@@ -207,6 +214,7 @@ Lessonplan.prototype.editLessonplanPage = function() {
   for (var i = 0; i < lessonPlans.length; i++) {
     if (lessonPlans[i].id == id) {
       document.getElementById('lessonTitle').value = lessonPlans[i].title;
+      document.getElementById('lessonImage').value = lessonPlans[i].image;
       document.getElementById('lessonDescription').value = lessonPlans[i].description;
       
       var div = document.createElement('div');
@@ -270,7 +278,8 @@ Lessonplan.prototype.update = function(id) {
 
   var finalObject = {
     title: lessonMetaData[0],
-    description: lessonMetaData[1],
+    image: lessonMetaData[1],
+    description: lessonMetaData[2],
     sections: lessonDataGrouped
   }
 

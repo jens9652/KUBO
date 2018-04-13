@@ -49,8 +49,14 @@ ProfileController.prototype.showLessonPlans = function(id) {
 			var div = document.createElement('div');
 	    div.className = 'lesson';
 
+	    var image = lessonPlans[i].image;
+
+	    if (!image) {
+	      image = 'public/images/Coding-box-open-2.jpg';
+	    }
+
 	    div.innerHTML = 
-	      '<div class="inner" style="background-image: url(&quot;public/images/charger-box.jpg&quot;)">\
+	      '<div class="inner" style="background-image: url(&quot;' + image + '&quot;)">\
 	        <div class="overlay"></div>\
 	        <div class="text">\
 	          <h3>' + lessonPlans[i].title + '</h3>\
