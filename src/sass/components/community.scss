@@ -49,3 +49,18 @@
     }
 
 }
+
+#communitytopic {
+
+    .topics {
+        .disscussion {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .post {
+            width: 32%;
+            margin-bottom: 2em;
+        }
+    }
+}
