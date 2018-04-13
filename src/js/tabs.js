@@ -8,8 +8,6 @@ function tabChangeContent(evt, target) {
 
   evt.currentTarget.classList.add("active");
 
-  console.log(target)
-
   if (target) {
     var tabContent = document.getElementsByClassName("tab-content");
 
