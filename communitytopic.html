@@ -1,31 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KEDU | Dashboard</title>
-  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:300,400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" href="public/css/style.css">
-  <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KEDU | Community Topic</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:300,400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
 </head>
-<body id="dashboard">
+<body id="communitytopic">
 
-  <header>
-    <div class="logo">
-      <img src="public/images/kedu-w.svg" alt="KEDU">
-    </div>
-    <div class="user-menu">
-      <ul>
-        <li>
-          <span class="user-greet">Hi, <span id="user"></span>!</span>
-          <img id="profile-image-header" src="public/images/avatar.svg" alt="User">
-          <ul>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="javascript:void(0);" onclick="user.signout()">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
+	<header>
+		<div class="logo">
+			<img src="public/images/kedu-w.svg" alt="KEDU">
+		</div>
+		<div class="user-menu">
+			<ul>
+				<li>
+					<span class="user-greet">Hi, <span id="user"></span>!</span>
+					<img id="profile-image-header" src="public/images/avatar.svg" alt="User">
+					<ul>
+						<li><a href="profile.html">Profile</a></li>
+						<li><a href="javascript:void(0);" onclick="user.signout()">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
 
-    </div>
-  </header>
-  
+		</div>
+	</header>
+
+	<div class="container">
+
+		<nav class="sidebar">
+			<div class="nav-top-container">
+				<ul>
+					<li><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="lessonplans.html">Lesson Plans</a></li>
+					<li><a href="training.html">Training</a></li>
+					<li class="active"><a href="community.html">Community</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main class="content">
+			<div class="page-header">
+				<h1>Community Topic</h1>
+			</div>
+
+			<div class="lesson-plans">
+				<div class="toolbar">
+					<div class="tabbing">
+						<div class="tabs">
+							<button class="tab active" onclick="tabChangeContent(event)">Most Recent</button>
+							<button class="tab" onclick="tabChangeContent(event)">Popular</button>
+							<button class="tab" onclick="tabChangeContent(event)">By Subject</button>
+							<button class="tab" onclick="tabChangeContent(event)">Favorites</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr class="divider">
+
+			<div class="topics">
+				<div class="container">
+					<div class="disscussion">
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">KEDU Admin</span>
+								<h3>Community regler</h3>
+								<p>Generelle regler for opførsel her.</p>
+								<p>Der må ikke deles ulovlige data her på side...</p>
+								<a href="communitypost.html" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">Elin Brinckmann</span>
+								<h3>Sådan laver du en god lessonplan</h3>
+								<p>Hej alle!</p>
+								<p>Synes du det er svært at lave en god lesson plan så læs...</p>
+								<a href="communitypost.html" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">Carsten Jørgensen</span>
+								<h3>Feedback på Matematik lessons</h3>
+								<p>Kære alle</p>
+								<p>Grundlæggende vil jeg sige, godt arbejde til dem der har...</p>
+								<a href="communitypost.html" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">Peter Heckett</span>
+								<h3>Hvordan logger jeg ud?</h3>
+								<p>Jeg kan ikke finde log ud knappen</p>
+								<p>Måske den er under min profil side, men kan ikke find...</p>
+								<a href="communitypost.html" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">KEDU Admin</span>
+								<h3>NYHEDER</h3>
+								<p>Følg de seneste nyheder vedr. KUBO</p>
+								<p>Vi lancerer en ny community side hvor fælleskabet bliver...</p>
+								<a href="communitypost.html" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+						<div class="post">
+							<div class="meta">
+								<img src="public/images/avatar.svg" alt="Avatar">
+							</div>
+							<div class="content">
+								<span class="name">Gurli Spandauer</span>
+								<h3>HJÆLP!</h3>
+								<p>Min Lesson plan er forsvundet!?</p>
+								<p>Jeg er ny på siden og var i gang med at lave en lesson pl...</p>
+								<a href="communitypost.html" class="btn btn-primary">View Post</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<script src="public/js/scripts.min.js"></script>
+		<script>
+			var controller = new DashboardController();
+		</script>
+		</body>
+	</div>

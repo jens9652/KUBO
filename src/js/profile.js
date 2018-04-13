@@ -1,6 +1,7 @@
 function ProfileController() {
 	DashboardController.call(this);
 }
+//Controls User Name input on profile page, Post's and Lesson Plans
 
 ProfileController.prototype.setProfile = function() {
 
