@@ -40,9 +40,7 @@
           <li><a href="community.html">Community</a></li>
         </ul>
       </div>
-      <div class="nav-bottom-container">
-        <button class="btn btn-success">Manual & Downloads</button>
-      </div>
+      
     </nav>
 
     <main class="content">
@@ -120,37 +118,8 @@
 
       <div class="lesson-plans">
         <h3 class="text-center add-space-bt">Latest Lesson Plans</h3>
-        <div class="container">
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/Classroom edition 1.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>KUBO Coding License</h3>
-                <p>Give your students a introduction to coding with this lesson plan.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/Body-+-leaning-head.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Advanced Looping</h3>
-                <p>This lesson plans take looping with KUBO to new heights!</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson">
-            <div class="inner" style="background-image: url('public/images/bag-of-language-tagtiles.jpg')">
-              <div class="overlay"></div>
-              <div class="text">
-                <h3>Basic Usage</h3>
-                <p>For absolute beginners or younger classes.</p>
-                <a href="#" class="btn btn-primary">View Lesson Plan</a>
-              </div>
-            </div>
-          </div>
+        <div id="latest-lessons">
+          
         </div>
       </div>
 
@@ -319,6 +288,7 @@
   <script src="public/js/scripts.min.js"></script>
   <script>
   var controller = new DashboardController();
+  controller.setLatestsLessons();
   </script>
 </body>
 </html>

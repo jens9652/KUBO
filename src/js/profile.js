@@ -1,11 +1,9 @@
 function ProfileController() {
-	this.user = user.authenticateUser();
+	DashboardController.call(this);
 }
 //Controls User Name input on profile page, Post's and Lesson Plans
 
 ProfileController.prototype.setProfile = function() {
-	document.getElementById('user').innerHTML = this.user.firstname;
-	document.getElementById('profile-image-header').src = this.user.image;
 
 	var fullname = this.user.firstname + " " + this.user.lastname;
 
