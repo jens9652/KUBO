@@ -3,25 +3,20 @@ function User() {
 
 User.prototype.signup = function() {
   var signupForm = document.forms['signup-form'];
-
-  var errors = signupForm.getElementsByClassName('error-message');
-  if (errors) {
-    while (errors[0]) {
-      errors[0].parentNode.removeChild(errors[0]);
-    }
-  }
+  var errors = 0;
 
   var userData = []
   for (var i = 0; i < signupForm.length - 1; i++) {
     if (signupForm.elements[i].value === '') {
-      var errorMessage = document.createElement('div');
-      errorMessage.className = 'error-message';
-      errorMessage.innerHTML = 'ERROR';
-      signupForm.elements[i].parentNode.appendChild(errorMessage);
-      return false;
+      errors++;
     } else {
       userData.push(signupForm.elements[i].value);
     }
+  }
+
+  if (errors) {
+    alert('All fields has to be filled!');
+    return false;
   }
 
   var newUser = {
@@ -55,31 +50,29 @@ User.prototype.signup = function() {
 
   localStorage.setItem('users', JSON.stringify(users));
 
+  alert('User created! You can now login!');
+  document.getElementById('login-tab-button').click();
+
   return false;
 
 }
 
 User.prototype.signin = function() {
   var signinForm = document.forms['signin-form'];
-
-  var errors = signinForm.getElementsByClassName('error-message');
-  if (errors) {
-    while (errors[0]) {
-      errors[0].parentNode.removeChild(errors[0]);
-    }
-  }
+  var errors = 0;
 
   var userData = [];
   for (var i = 0; i < signinForm.length - 1; i++) {
     if (signinForm.elements[i].value === '') {
-      var errorMessage = document.createElement('div');
-      errorMessage.className = 'error-message';
-      errorMessage.innerHTML = 'ERROR';
-      signinForm.elements[i].parentNode.appendChild(errorMessage);
-      return false;
+      errors++;
     } else {
       userData.push(signinForm.elements[i].value);
     }
+  }
+
+  if (errors) {
+    alert('Please provide your email and password to login.');
+    return false;
   }
 
   var user = this.lookupUser(userData[0], userData[1]);
