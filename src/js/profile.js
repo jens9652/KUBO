@@ -1,6 +1,7 @@
 function ProfileController() {
 	this.user = user.authenticateUser();
 }
+//Controls User Name input on profile page, Post's and Lesson Plans
 
 ProfileController.prototype.setProfile = function() {
 	document.getElementById('user').innerHTML = this.user.firstname;
