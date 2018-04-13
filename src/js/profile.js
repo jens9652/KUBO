@@ -1,10 +1,8 @@
 function ProfileController() {
-	this.user = user.authenticateUser();
+	DashboardController.call(this);
 }
 
 ProfileController.prototype.setProfile = function() {
-	document.getElementById('user').innerHTML = this.user.firstname;
-	document.getElementById('profile-image-header').src = this.user.image;
 
 	var fullname = this.user.firstname + " " + this.user.lastname;
 

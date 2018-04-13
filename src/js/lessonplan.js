@@ -1,5 +1,5 @@
 function Lessonplan() {
-  DashboardController.call();
+  DashboardController.call(this);
 }
 
 Lessonplan.prototype.addNewSection = function() {
