@@ -1,7 +1,4 @@
-function Accordion (accordion) {
-}
-
-Accordion.prototype.toggleItem = function(element) {
+toggleAccordionItem = function(element) {
   var itemClass = element.parentNode.className;
   var accordion = document.getElementById('accordion');
   var accordionItems = accordion.getElementsByClassName('accordion-item');
@@ -12,10 +9,4 @@ Accordion.prototype.toggleItem = function(element) {
   if (itemClass == 'accordion-item close') {
     element.parentNode.className = 'accordion-item open';
   }
-}
-
-var item = document.getElementById('accordion');
-
-if (item) {
-  var accordion = new Accordion(item);
 }
