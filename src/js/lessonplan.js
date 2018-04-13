@@ -77,6 +77,8 @@ Lessonplan.prototype.publish = function() {
   lessonPlans.unshift(finalObject);
 
   localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
+  localStorage.setItem('openedLessonplan', JSON.stringify(finalObject.id));
+  window.location = 'view-lessonplan.html'
 }
 
 Lessonplan.prototype.listLessons = function(element) {
@@ -292,6 +294,8 @@ Lessonplan.prototype.update = function(id) {
   lessonPlans.unshift(finalObject);
 
   localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
+  localStorage.setItem('openedLessonplan', JSON.stringify(finalObject.id));
+  window.location = 'view-lessonplan.html';
 }
 
 Lessonplan.prototype.delete = function(id) {
@@ -311,4 +315,5 @@ Lessonplan.prototype.delete = function(id) {
   }
 
   localStorage.setItem('lessonPlans', JSON.stringify(lessonPlans));
+  window.location = 'lessonplans.html';
 };
