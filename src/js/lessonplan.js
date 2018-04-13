@@ -70,6 +70,7 @@ Lessonplan.prototype.publish = function() {
   }
 
   finalObject.id = (lessonPlans.length + 1);
+  finalObject.author = this.user;
 
   console.log(finalObject)
 
