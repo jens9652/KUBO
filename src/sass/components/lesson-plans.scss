@@ -69,6 +69,11 @@
   .description {
     @include small;
     flex: 0 0 32%;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
   }
 
   .materials {
@@ -78,8 +83,15 @@
     display: flex;
     flex-wrap: wrap;
 
+    h3 {
+      flex: 0 0 100%;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+
     .material {
       flex: 0 0 33%;
+      padding-bottom: 1em;
       display: flex;
       align-items: center;
 
@@ -107,6 +119,7 @@
 
     &:checked + label {
       border-color: $primaryBlue;
+      color: $primaryBlue;
     }
   }
 
@@ -120,7 +133,8 @@
   }
 
   img {
-    height: 3em;
+    height: 4em;
+    padding-right: 1em;
   }
 }
 

@@ -159,15 +159,20 @@ Lessonplan.prototype.showLesson = function(lesson, meta, accordion, header, tool
   var materials = document.createElement('div');
   materials.className = 'materials';
 
+  var header = document.createElement('h3');
+  header.innerHTML = 'Materials'
+
+  materials.appendChild(header)
+
   for (var i = 0; i < lesson.materials.length; i++) {
     var material = document.createElement('div');
     material.className = 'material';
 
     material.innerHTML = 
-      '<img src="public/images/' + lesson.materials[i].id + '.svg" alt="Dummy">\
+      '<img src="public/images/materials/' + lesson.materials[i].id + '.svg" alt="Dummy">\
        <span class="material-title">' + lesson.materials[i].title + '</span>'
 
-       materials.appendChild(material);
+    materials.appendChild(material);
   }
 
   metaContent.appendChild(materials);
