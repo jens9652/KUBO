@@ -1,7 +1,5 @@
 function Lessonplan() {
-  this.user = user.authenticateUser();
-
-  document.getElementById('user').innerHTML = this.user.firstname;
+  DashboardController.call();
 }
 
 Lessonplan.prototype.addNewSection = function() {
