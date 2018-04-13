@@ -24,6 +24,7 @@ Lessonplan.prototype.addNewSection = function() {
 
 Lessonplan.prototype.publish = function() {
   var lessonForm = document.forms['lesson-form'];
+  var materialsForm = document.forms['materials-select'];
   var lessonMeta = document.forms['meta-data'];
 
   var lessonData = [];
@@ -51,10 +52,26 @@ Lessonplan.prototype.publish = function() {
     lessonMetaData.push(lessonMeta.elements[i].value);
   }
 
+  var materials = [];
+
+  for (var i = 0; i < materialsForm.elements.length; i++) {
+    var checkbox = materialsForm.elements[i];
+
+    if (checkbox.checked) {
+      var materialObject = {
+        title: checkbox.value,
+        id: checkbox.id
+      }
+
+      materials.push(materialObject);
+    }
+  }
+
   var finalObject = {
     title: lessonMetaData[0],
     image: lessonMetaData[1],
     description: lessonMetaData[2],
+    materials: materials,
     sections: lessonDataGrouped
   }
 
@@ -137,33 +154,23 @@ Lessonplan.prototype.showLesson = function(lesson, meta, accordion, header, tool
     '<div class="description">\
       <h3>About the Lesson</h3>\
       <p>' + lesson.description + '</p>\
-    </div>\
-    <div class="materials">\
-      <div class="material">\
-        <img src="public/images/avatar.svg" alt="Dummy">\
-        <span class="material-title">Movement TagTiles®</span>\
-      </div>\
-      <div class="material">\
-        <img src="public/images/avatar.svg" alt="Dummy">\
-        <span class="material-title">Movement TagTiles®</span>\
-      </div>\
-      <div class="material">\
-        <img src="public/images/avatar.svg" alt="Dummy">\
-        <span class="material-title">Movement TagTiles®</span>\
-      </div>\
-      <div class="material">\
-        <img src="public/images/avatar.svg" alt="Dummy">\
-        <span class="material-title">Movement TagTiles®</span>\
-      </div>\
-      <div class="material">\
-        <img src="public/images/avatar.svg" alt="Dummy">\
-        <span class="material-title">Movement TagTiles®</span>\
-      </div>\
-      <div class="material">\
-        <img src="public/images/avatar.svg" alt="Dummy">\
-        <span class="material-title">Movement TagTiles®</span>\
-      </div>\
     </div>'
+
+  var materials = document.createElement('div');
+  materials.className = 'materials';
+
+  for (var i = 0; i < lesson.materials.length; i++) {
+    var material = document.createElement('div');
+    material.className = 'material';
+
+    material.innerHTML = 
+      '<img src="public/images/' + lesson.materials[i].id + '.svg" alt="Dummy">\
+       <span class="material-title">' + lesson.materials[i].title + '</span>'
+
+       materials.appendChild(material);
+  }
+
+  metaContent.appendChild(materials);
 
   meta.appendChild(metaContent);
 
@@ -218,8 +225,12 @@ Lessonplan.prototype.editLessonplanPage = function() {
       div.id = 'create-lesson';
       div.class = 'create-lesson';
 
-      for (var i = 0; i < lessonPlans[i].sections.length; i++) {
-        var section =lessonPlans[i].sections[i];
+      for (var j = 0; j < lessonPlans[i].materials.length; j++) {
+        document.getElementById(lessonPlans[i].materials[j].id).checked = true;
+      }
+
+      for (var k = 0; k < lessonPlans[i].sections.length; k++) {
+        var section = lessonPlans[i].sections[k];
 
         var container = document.createElement('div');
         container.className = 'section';
@@ -246,6 +257,7 @@ Lessonplan.prototype.editLessonplanPage = function() {
 
 Lessonplan.prototype.update = function(id) {
   var lessonForm = document.forms['lesson-form'];
+  var materialsForm = document.forms['materials-select'];
   var lessonMeta = document.forms['meta-data'];
 
   var lessonData = [];
@@ -290,8 +302,24 @@ Lessonplan.prototype.update = function(id) {
     }
   }
 
+  var materials = [];
+
+  for (var i = 0; i < materialsForm.elements.length; i++) {
+    var checkbox = materialsForm.elements[i];
+
+    if (checkbox.checked) {
+      var materialObject = {
+        title: checkbox.value,
+        id: checkbox.id
+      }
+
+      materials.push(materialObject);
+    }
+  }
+
   finalObject.id = id;
   finalObject.author = this.user;
+  finalObject.materials = materials;
 
   for (var i = 0; i < lessonPlans.length; i++) {
     if (lessonPlans[i].id == id) {

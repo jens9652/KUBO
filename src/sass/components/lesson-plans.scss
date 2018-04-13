@@ -92,6 +92,38 @@
 
 }
 
+.materials-select {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .select {
+    width: 32%;
+    flex: 0 0 auto;
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      border-color: $primaryBlue;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    padding: 0.5em 0.25em;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    height: 3em;
+  }
+}
+
 .create-lesson-controls {
 
   .container {
