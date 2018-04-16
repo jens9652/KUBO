@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
 </head>
-<body id="dashboard">
+<body>
 
   <header>
     <div class="logo">
@@ -44,70 +44,67 @@
     </nav>
 
     <main class="content">
-      <div class="styletile-container">
-        <div class="styletile-half">
-          <div class="page-header">
-            <h1>Ny lesson plan</h1>
-          </div>
-          <section id="community-discussion">
+      <div class="page-header">
+        <h1>Ny lesson plan</h1>
+      </div>
 
-            <div class="disscussion">
-              <div class="post">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Carsten Jørgensen</span>
-                  <span class="no-post">6 posts</span>
-                </div>
-                <div class="content">
-                  <p>Hej Venner!</p>
-                  <p>Min nye undervisning med KUBO fungere bare skide godt! Kan varmt anbefale denne guide som er lavet til absolut begyndere.</p>
-                  <p>Mvh. Carsten</p>
-                </div>
-              </div>
-              <div class="post post-best-answer">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Elin Brinkmann</span>
-                  <span class="no-post">120 posts</span>
-                </div>
-                <div class="content">
-                  <p>Det er en rigtig fin guide.</p>
-                  <p>Den lagde en af mine lærere også ud med, da han skulle undervise en anden klasse på Midtals Friskole. :-)</p>
-                  <p>Kan varmt anbefales!</p>
-                  <div class="rating-buttons">
-                    <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-              <div class="post">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Carsten Jørgensen</span>
-                  <span class="no-post">6 posts</span>
-                </div>
-                <div class="content">
-                  <p>Tak for feedbacken Elin...</p>
-                  <p>Jeg synes lige jeg ville dele min begejstring! KUBO er så fedt!</p>
-                  <div class="rating-buttons">
-                    <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
+      <div class="disscussion">
+        <div class="post">
+          <div class="meta">
+            <img src="public/images/avatar.svg" alt="Avatar">
+            <span class="name">Carsten Jørgensen</span>
+            <span class="no-post">6 posts</span>
+          </div>
+          <div class="content">
+            <p>Hej Venner!</p>
+            <p>Min nye undervisning med KUBO fungere bare skide godt! Kan varmt anbefale denne guide som er lavet til absolut begyndere.</p>
+            <p>Mvh. Carsten</p>
+          </div>
+        </div>
+        <div class="post post-best-answer">
+          <div class="meta">
+            <img src="public/images/avatar.svg" alt="Avatar">
+            <span class="name">Elin Brinkmann</span>
+            <span class="no-post">120 posts</span>
+          </div>
+          <div class="content">
+            <p>Det er en rigtig fin guide.</p>
+            <p>Den lagde en af mine lærere også ud med, da han skulle undervise en anden klasse på Midtals Friskole. :-)</p>
+            <p>Kan varmt anbefales!</p>
+            <div class="rating-buttons">
+              <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
             </div>
-             <h3>Tilføj Kommentar</h3>
+          </div>
+        </div>
+        <div class="post">
+          <div class="meta">
+            <img src="public/images/avatar.svg" alt="Avatar">
+            <span class="name">Carsten Jørgensen</span>
+            <span class="no-post">6 posts</span>
+          </div>
+          <div class="content">
+            <p>Tak for feedbacken Elin...</p>
+            <p>Jeg synes lige jeg ville dele min begejstring! KUBO er så fedt!</p>
+            <div class="rating-buttons">
+              <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
+            </div>
+          </div>
+        </div>
+        <div class="post is-reply">
+          <div class="meta">
+            <img src="public/images/avatar.svg" id="profile-image-comment" alt="Avatar">
+            <span class="name" id="profile-user-comment">Carsten Jørgensen</span>
+          </div>
+          <div class="content">
             <div class="input-control">
+              <label for="textarea">Skriv en Kommentar</label>
               <textarea name="textarea" id="textare"></textarea>
             </div>
-          </section>
-          <button class="btn btn-success">Tilføj</button>
+          </div>
         </div>
-
-
-      </section>
+      </div>
     </main>
 
   </div>

@@ -2,13 +2,31 @@
 
   .post {
     display: flex;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+
+    &.is-reply {
+      background: $lightGrey;
+      padding: 1em 0;
+      padding-right: 2em;
+      border-radius: 4px;
+    }
 
     .meta {
       width: 25%;
       text-align: center;
       border-right: 1px solid $darkGrey;
-      padding: 0 2em;
+
+      &.is-small {
+        img {
+          padding: 0 1em;
+        }
+      }
+
+      img {
+        width: 100%;
+        padding: 0 5em 0.5em;
+        border-radius: 50%;
+      }
 
       .name {
         color: $primaryBlue;
@@ -21,6 +39,7 @@
         color: $darkGrey;
         display: block;
       }
+
     }
 
     .content {
