@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
 </head>
-<body id="dashboard">
+<body id="training">
 
   <header>
     <div class="logo">
@@ -49,119 +49,132 @@
       <div class="training">
         <div>
           <iframe src="https://player.vimeo.com/video/241213334" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <div class="text-container">
-          <h3>Getting Started: Turn KUBO on</h3>
-          </div>
         </div>
         <div class="small">
           <div class="item">
-            <div class="inner">
-              <div class="img-container">
-                <img src="public/images/news-small1.jpg" alt="News 1">
+            <a onclick="changeTraining('https://player.vimeo.com/241213334')" href="javascript:void(0);">
+              <div class="inner active">
+                <div class="img-container">
+                  <img src="public/images/training-turning_kubo_on.webp" alt="Turning KUBO on">
+                </div>
+                <div class="text-container">
+                  <h3>Turn KUBO on</h3>
+                </div>
               </div>
-              <div class="text-container">
-                <h3>Getting Started:</h3>
-                <p>Routes and Functions</p>
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/241213826')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/routes_and_functions.webp" alt="Routes & Functions">
+                </div>
+                <div class="text-container">
+                  <h3>Routes & Functions</h3>
+                </div>
               </div>
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/241524463')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/loops.webp" alt="Loops">
+                </div>
+                <div class="text-container">
+                  <h3>Loops</h3>
+                </div>
+              </div>
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/241214567')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/recursive_functions.webp" alt="Recursive Functions">
+                </div>
+                <div class="text-container">
+                  <h3>Recursive Functions</h3>
+                </div>
+              </div>
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/240802954')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/subroutines.webp" alt="Subroutines">
+                </div>
+                <div class="text-container">
+                  <h3>Subroutines</h3>
+                  <p></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="disscussion">
+        <h3 class="add-space-bt text-center">Comments</h3>
+        <div class="post">
+          <div class="meta">
+            <img src="public/images/carsten.png" alt="Avatar">
+            <span class="name">Carsten Jørgensen</span>
+            <span class="no-post">6 posts</span>
+          </div>
+          <div class="content">
+            <p>Rigtig gode videoer! Super informativt og nemt at lære!</p>
+            <div class="rating-buttons">
+              <button onclick="upVote(event)" class="btn-vote up"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button onclick="downVote(event)" class="btn-vote down"><img src="public/images/downvote.svg" alt="Down Vote"></button>
             </div>
-            <div class="inner">
-              <div class="img-container">
-                <img src="public/images/news-small2.jpg" alt="News 2">
-              </div>
-              <div class="text-container">
-                <h3>Getting Started:</h3>
-                <p>Subroutines</p>
-              </div>
+            <button class="btn btn-primary answer">Reply</button>
+          </div>
+        </div>
+        <div class="post post-best-answer">
+          <div class="meta">
+            <img src="public/images/elin.jpg" alt="Avatar">
+            <span class="name">Elin Brinkmann</span>
+            <span class="no-post">120 posts</span>
+          </div>
+          <div class="content">
+            <p>Jeg har stadig lidt svært ved at finde ud af hvordan man tænder Kubo'en.</p>
+            <div class="rating-buttons">
+              <button onclick="upVote(event)" class="btn-vote up"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button onclick="downVote(event)" class="btn-vote down"><img src="public/images/downvote.svg" alt="Down Vote"></button>
             </div>
-            <div class="inner">
-              <div class="img-container">
-                <img src="public/images/news-small3.jpg" alt="News 3">
-              </div>
-              <div class="text-container">
-                <h3>Getting Started:</h3>
-                <p>Recursive Functions</p>
-              </div>
+            <button class="btn btn-primary answer">Reply</button>
+          </div>
+        </div>
+        <div class="post">
+          <div class="meta">
+            <img src="public/images/carsten.png" alt="Avatar">
+            <span class="name">Carsten Jørgensen</span>
+            <span class="no-post">6 posts</span>
+          </div>
+          <div class="content">
+            <p>Hej Elin!</p>
+            <p>Du skal klikke på videoerne i højre side! Der er en om hvordan man tænder robotten :-)</p>
+            <div class="rating-buttons">
+              <button onclick="upVote(event)" class="btn-vote up"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button onclick="downVote(event)" class="btn-vote down"><img src="public/images/downvote.svg" alt="Down Vote"></button>
+            </div>
+            <button class="btn btn-primary answer">Reply</button>
+          </div>
+        </div>
+        <div class="post is-reply">
+          <div class="meta">
+            <img src="public/images/avatar.svg" id="profile-image-comment" alt="Avatar">
+            <span class="name" id="profile-user-comment">Carsten Jørgensen</span>
+          </div>
+          <div class="content">
+            <div class="input-control">
+              <label for="textarea">Skriv en Kommentar</label>
+              <textarea name="textarea" id="textare"></textarea>
             </div>
           </div>
         </div>
       </div>
-      <div class="styletile-container">
-        <div class="styletile-half">
-          <section id="community-discussion">
-            <h3>Comments</h3>
+    </main>
 
-            <div class="disscussion">
-              <div class="post">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Carsten Jørgensen</span>
-                  <span class="no-post">6 posts</span>
-                </div>
-                <div class="content">
-                  <p>Rigtig gode videoer! Super informativt og nemt at lære!</p>
-                  <div class="rating-buttons">
-                    <button onclick="upVote(event)" class="btn-vote up"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button onclick="downVote(event)" class="btn-vote down"><img src="public/images/downvote.svg" alt="Down Vote"></button>
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-              <div class="post post-best-answer">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Elin Brinkmann</span>
-                  <span class="no-post">2 posts</span>
-                </div>
-                <div class="content">
-                  <p>Jeg har stadig lidt svært ved at finde ud af hvordan man tænder Kubo'en.</p>
-                  <div class="rating-buttons">
-                    <button onclick="upVote(event)" class="btn-vote up"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button onclick="downVote(event)" class="btn-vote down"><img src="public/images/downvote.svg" alt="Down Vote"></button>                   
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-              <div class="post thread-reply">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Carsten Jørgensen</span>
-                  <span class="no-post">6 posts</span>
-                </div>
-                <div class="content">
-                  <p>Hej Elin!</p>
-                  <p>Du skal klikke på videoerne i højre side! Der er en om hvordan man tænder robotten :-)</p>
-                  <div class="rating-buttons">
-                    <button onclick="upVote(event)" class="btn-vote up"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button onclick="downVote(event)" class="btn-vote down"><img src="public/images/downvote.svg" alt="Down Vote"></button>
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-                            <div class="post post-best-answer">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Peter Heckett</span>
-                  <span class="no-post">23 posts</span>
-                </div>
-                <div class="content">
-                  <p>Tak for de gode videoer</p>
-                  <div class="rating-buttons">
-                    <button onclick="upVote(event)" class="btn-vote up"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button onclick="downVote(event)" class="btn-vote down"><img src="public/images/downvote.svg" alt="Down Vote"></button>                    
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-            </div>
+  </div>
 
-          </section>
-        </main>
-
-      </div>
-
-      <script src="public/js/scripts.min.js"></script>
-      <script>
-        var controller = new DashboardController();
-      </script>
-  </body>
+  <script src="public/js/scripts.min.js"></script>
+  <script>
+    var controller = new DashboardController();
+  </script>
+</body>
 </html>

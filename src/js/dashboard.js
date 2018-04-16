@@ -3,6 +3,11 @@ function DashboardController() {
 
   document.getElementById('user').innerHTML = this.user.firstname;
   document.getElementById('profile-image-header').src = this.user.image;
+
+  if (document.getElementById('profile-image-comment')) {
+    document.getElementById('profile-image-comment').src = this.user.image;
+    document.getElementById('profile-user-comment').innerHTML = this.user.firstname + ' ' + this.user.lastname;
+  }
 }
 
 DashboardController.prototype.setLatestsLessons = function() {
