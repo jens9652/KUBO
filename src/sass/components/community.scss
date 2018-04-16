@@ -64,3 +64,13 @@
         }
     }
 }
+
+.btn-clicked-upvote {
+    background: lighten($green,10%) !important;
+    box-shadow: 0 0 4px $green;
+}
+
+.btn-clicked-downvote {
+    background: lighten($red,5%) !important;
+    box-shadow: 0 0 4px $red;
+}
