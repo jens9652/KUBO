@@ -106,83 +106,75 @@
           </div>
         </div>
       </div>
-      <div class="styletile-container">
-        <div class="styletile-half">
-          <section id="community-discussion">
-            <h3>Comments</h3>
 
-            <div class="disscussion">
-              <div class="post">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Carsten Jørgensen</span>
-                  <span class="no-post">6 posts</span>
-                </div>
-                <div class="content">
-                  <p>Rigtig gode videoer! Super informativt og nemt at lære!</p>
-                  <div class="rating-buttons">
-                    <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-              <div class="post post-best-answer">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Elin Brinkmann</span>
-                  <span class="no-post">2 posts</span>
-                </div>
-                <div class="content">
-                  <p>Jeg har stadig lidt svært ved at finde ud af hvordan man tænder Kubo'en.</p>
-                  <div class="rating-buttons">
-                    <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>                   
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-              <div class="post thread-reply">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Carsten Jørgensen</span>
-                  <span class="no-post">6 posts</span>
-                </div>
-                <div class="content">
-                  <p>Hej Elin!</p>
-                  <p>Du skal klikke på videoerne i højre side! Der er en om hvordan man tænder robotten :-)</p>
-                  <div class="rating-buttons">
-                    <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
-                            <div class="post post-best-answer">
-                <div class="meta">
-                  <img src="public/images/avatar.svg" alt="Avatar">
-                  <span class="name">Peter Heckett</span>
-                  <span class="no-post">23 posts</span>
-                </div>
-                <div class="content">
-                  <p>Tak for de gode videoer</p>
-                  <div class="rating-buttons">
-                    <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
-                    <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>                    
-                  </div>
-                  <button class="btn btn-primary answer">Reply</button>
-                </div>
-              </div>
+      <div class="disscussion">
+        <h3 class="add-space-bt text-center">Comments</h3>
+        <div class="post">
+          <div class="meta">
+            <img src="public/images/avatar.svg" alt="Avatar">
+            <span class="name">Carsten Jørgensen</span>
+            <span class="no-post">6 posts</span>
+          </div>
+          <div class="content">
+            <p>Rigtig gode videoer! Super informativt og nemt at lære!</p>
+            <div class="rating-buttons">
+              <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
             </div>
-
-          </section>
-        </main>
-
+            <button class="btn btn-primary answer">Reply</button>
+          </div>
+        </div>
+        <div class="post post-best-answer">
+          <div class="meta">
+            <img src="public/images/avatar.svg" alt="Avatar">
+            <span class="name">Elin Brinkmann</span>
+            <span class="no-post">120 posts</span>
+          </div>
+          <div class="content">
+            <p>Jeg har stadig lidt svært ved at finde ud af hvordan man tænder Kubo'en.</p>
+            <div class="rating-buttons">
+              <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>                   
+            </div>
+            <button class="btn btn-primary answer">Reply</button>
+          </div>
+        </div>
+        <div class="post">
+          <div class="meta">
+            <img src="public/images/avatar.svg" alt="Avatar">
+            <span class="name">Carsten Jørgensen</span>
+            <span class="no-post">6 posts</span>
+          </div>
+          <div class="content">
+            <p>Hej Elin!</p>
+            <p>Du skal klikke på videoerne i højre side! Der er en om hvordan man tænder robotten :-)</p>
+            <div class="rating-buttons">
+              <button class="btn-vote"><img src="public/images/upvote.svg" alt="Up Vote"></button>
+              <button class="btn-vote"><img src="public/images/downvote.svg" alt="Down Vote"></button>
+            </div>
+            <button class="btn btn-primary answer">Reply</button>
+          </div>
+        </div>
+        <div class="post is-reply">
+          <div class="meta">
+            <img src="public/images/avatar.svg" id="profile-image-comment" alt="Avatar">
+            <span class="name" id="profile-user-comment">Carsten Jørgensen</span>
+          </div>
+          <div class="content">
+            <div class="input-control">
+              <label for="textarea">Skriv en Kommentar</label>
+              <textarea name="textarea" id="textare"></textarea>
+            </div>
+          </div>
+        </div>
       </div>
+    </main>
 
-      <script src="public/js/scripts.min.js"></script>
-      <script>
-        var controller = new DashboardController();
-      </script>
-  </body>
+  </div>
+
+  <script src="public/js/scripts.min.js"></script>
+  <script>
+    var controller = new DashboardController();
+  </script>
+</body>
 </html>
