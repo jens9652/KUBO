@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
 </head>
-<body id="dashboard">
+<body id="training">
 
   <header>
     <div class="logo">
@@ -49,39 +49,60 @@
       <div class="training">
         <div>
           <iframe src="https://player.vimeo.com/video/241213334" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <div class="text-container">
-          <h3>Getting Started: Turn KUBO on</h3>
-          </div>
         </div>
         <div class="small">
           <div class="item">
-            <div class="inner">
-              <div class="img-container">
-                <img src="public/images/news-small1.jpg" alt="News 1">
+            <a onclick="changeTraining('https://player.vimeo.com/241213334')" href="javascript:void(0);">
+              <div class="inner active">
+                <div class="img-container">
+                  <img src="public/images/training-turning_kubo_on.webp" alt="Turning KUBO on">
+                </div>
+                <div class="text-container">
+                  <h3>Turn KUBO on</h3>
+                </div>
               </div>
-              <div class="text-container">
-                <h3>Getting Started:</h3>
-                <p>Routes and Functions</p>
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/241213826')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/routes_and_functions.webp" alt="Routes & Functions">
+                </div>
+                <div class="text-container">
+                  <h3>Routes & Functions</h3>
+                </div>
               </div>
-            </div>
-            <div class="inner">
-              <div class="img-container">
-                <img src="public/images/news-small2.jpg" alt="News 2">
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/241524463')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/loops.webp" alt="Loops">
+                </div>
+                <div class="text-container">
+                  <h3>Loops</h3>
+                </div>
               </div>
-              <div class="text-container">
-                <h3>Getting Started:</h3>
-                <p>Subroutines</p>
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/241214567')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/recursive_functions.webp" alt="Recursive Functions">
+                </div>
+                <div class="text-container">
+                  <h3>Recursive Functions</h3>
+                </div>
               </div>
-            </div>
-            <div class="inner">
-              <div class="img-container">
-                <img src="public/images/news-small3.jpg" alt="News 3">
+            </a>
+            <a onclick="changeTraining('https://player.vimeo.com/240802954')" href="javascript:void(0);">
+              <div class="inner">
+                <div class="img-container">
+                  <img src="public/images/subroutines.webp" alt="Subroutines">
+                </div>
+                <div class="text-container">
+                  <h3>Subroutines</h3>
+                  <p></p>
+                </div>
               </div>
-              <div class="text-container">
-                <h3>Getting Started:</h3>
-                <p></p>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
