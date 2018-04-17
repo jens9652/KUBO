@@ -1,6 +1,4 @@
 node_modules
 .DS_Store
-public/css
-public/js
 .sass-cache
 .package-lock.json

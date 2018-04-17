@@ -18,6 +18,12 @@ body.styletile {
   color: $white;
   padding: 1em 0;
 
+  .brand {
+    img {
+      height: 45px;
+    }
+  }
+
   h2 {
     margin: 0;
   }
