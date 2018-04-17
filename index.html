@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="KEDU-Community is an online curriculum platform for the KUBO-robot. Join the community to discover, share, and make lesson plans for your students and colleagues!">
   <meta name="keywords" content="KUBO, KEDU, Robotics, Learning, IT, Community, Lesson plan, forum, Robot, Programming, Coding, Teaching">
-	<title>KEDU | Login</title>
-  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato:400,400i,700" rel="stylesheet">
+  <title>KEDU | Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700%7CLato:400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="icon" type="image/png" href="public/images/favicon_96x96.png" sizes="96x96">
 </head>
@@ -21,7 +21,7 @@
   <div class="login-screen">
     <div class="application-description">
       <div class="welcome-image">
-        <img src="public/images/new-screen kopi.png" class="img-responsive" alt="KEDU Online Platform">
+        <img src="public/images/new-screen.png" class="img-responsive" alt="KEDU Online Platform">
       </div>
       <h1>KUBO’s online curriculum platform</h1>
       <p>KUBO Education (or KEDU for short) is KUBO’s online curriculum platform. If you’re a teacher or educator, head on over to find tutorials, exercises, videos, and inspiration. You can also share your own knowledge about KUBO and how to use it with other teachers and educators around the world.</p>
@@ -40,12 +40,12 @@
           <div class="tab-content active" id="login-tab">
             <form id="signin-form" onsubmit="return user.signin()">
               <div class="input-control">
-                <label for="email">Email</label>
-                <input type="email" name="email" placeholder="someone@yourdomain.com">
-              </div class="input-control">
+                <label for="signin-email">Email</label>
+                <input type="email" id="signin-email" name="signin-email" placeholder="someone@yourdomain.com">
+              </div>
               <div class="input-control">
-                <label for="password">Password</label>
-                <input type="password" name="password" placeholder="Type your password...">
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" name="signin-password" placeholder="Type your password...">
               </div>
               <div class="input-control">
                 <input class="btn btn-success" type="submit" value="Login">
@@ -55,20 +55,20 @@
           <div class="tab-content disabled" id="signup-tab">
             <form id="signup-form" onsubmit="return user.signup()">
               <div class="input-control">
-                <label for="name">Firstname</label>
-                <input type="text" name="firstname" placeholder="Type your firstname...">
+                <label for="signup-firstname">Firstname</label>
+                <input type="text" id="signup-firstname" name="signup-firstname" placeholder="Type your firstname...">
               </div>
               <div class="input-control">
-                <label for="name">Lastame</label>
-                <input type="text" name="lastname" placeholder="Type your lastname...">
+                <label for="signup-lastname">Lastame</label>
+                <input type="text" id="signup-lastname" name="signup-lastname" placeholder="Type your lastname...">
               </div>
               <div class="input-control">
-                <label for="name">School</label>
-                <input type="text" name="school" placeholder="Type your schools name...">
+                <label for="signup-school">School</label>
+                <input type="text" id="signup-school" name="signup-school" placeholder="Type your schools name...">
               </div>
               <div class="input-control">
-                <label for="name">Country</label>
-                <select type="text" name="school" placeholder="Select a Country...">
+                <label for="signup-country">Country</label>
+                <select id="signup-country" name="signup-country">
                   <option value="">Select a Country...</option>
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="Albania">Albania</option>
@@ -308,7 +308,7 @@
                   <option value="British Virgin Islands">British Virgin Islands</option>
                   <option value="Isle of Man">Isle of Man</option>
                   <option value="US Virgin Islands">US Virgin Islands</option>
-									<option value="Wakanda">Wakanda</option>
+                  <option value="Wakanda">Wakanda</option>
                   <option value="Wallis and Futuna">Wallis and Futuna</option>
                   <option value="Western Sahara">Western Sahara</option>
                   <option value="Yemen">Yemen</option>
@@ -317,12 +317,12 @@
                 </select>
               </div>
               <div class="input-control">
-                <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Type your email...">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" name="signup-email" placeholder="Type your email...">
               </div>
               <div class="input-control">
-                <label for="password">Password</label>
-                <input type="password" name="password" placeholder="Choose a password...">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="signup-password" placeholder="Choose a password...">
               </div>
               <div class="input-control">
                 <input class="btn btn-success" type="submit" value="Sign Up">

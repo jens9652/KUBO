@@ -145,7 +145,7 @@ Lessonplan.prototype.openLesson = function(meta, accordion, header, toolbar) {
 }
 
 Lessonplan.prototype.showLesson = function(lesson, meta, accordion, header, toolbar) {
-  header.innerHTML = lesson.title;
+  header.innerHTML = '<h1>' + lesson.title + '</h1><h3>by ' + lesson.author.firstname + ' ' + lesson.author.lastname + '</h3>';
 
   var metaContent = document.createElement('div');
   metaContent.className = 'container';

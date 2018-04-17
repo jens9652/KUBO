@@ -66,6 +66,15 @@
 
 .view-lesson-plan {
 
+  .page-header {
+    
+    h3 {
+      color: $white;
+      margin-top: 0;
+    }
+
+  }
+
   .description {
     @include small;
     flex: 0 0 32%;
