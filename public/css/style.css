@@ -52,6 +52,8 @@ body.styletile {
   background: #1F5D8E;
   color: #FFFFFF;
   padding: 1em 0; }
+  .styletile-header .brand img {
+    height: 45px; }
   .styletile-header h2 {
     margin: 0; }
   .styletile-header .styletile-container {
